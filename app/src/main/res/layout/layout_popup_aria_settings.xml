@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#80000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/bg_square_full_radius_white"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/aria_global_settings"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_title" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_settings_weight"
+            android:background="@color/line_settings" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:text="@string/aria_download_speed_limit"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_mid" />
+
+            <EditText
+                android:id="@+id/et_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selector_square_stroke_edittext"
+                android:ellipsize="end"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_mid" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:text="@string/aria_upload_speed_limit"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_mid" />
+
+            <EditText
+                android:id="@+id/et_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selector_square_stroke_edittext"
+                android:ellipsize="end"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_mid" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:text="@string/aria_download_max_concurrent"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_mid" />
+
+            <EditText
+                android:id="@+id/et_max_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selector_square_stroke_edittext"
+                android:ellipsize="end"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_mid" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:text="@string/aria_download_piece_length"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_mid" />
+
+            <EditText
+                android:id="@+id/et_piece_len"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selector_square_stroke_edittext"
+                android:ellipsize="end"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_mid" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_settings_weight"
+            android:layout_marginTop="5dp"
+            android:background="@color/line_settings" />
+
+        <Button
+            android:id="@+id/btn_save_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_square_bottom_radius_white_trans_gray"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/save_settings"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_mid" />
+    </LinearLayout>
+
+</RelativeLayout>

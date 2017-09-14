@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black">
+
+    <!--<com.eli.oneos.widget.preview.GalleryViewPager
+        android:id="@+id/switch_viewer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />-->
+    <com.eli.oneos.widget.preview.HackyViewPager
+        android:id="@+id/switch_viewer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_picture_viewer_title">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_button_title_back" />
+
+        <TextView
+            android:id="@+id/txt_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/btn_back"
+            android:gravity="center"
+            android:text="@string/title_back"
+            android:textColor="@color/selector_white_to_gray"
+            android:textSize="@dimen/text_size_mid" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/selector_white_to_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text_gap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="@string/gap_symbol"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_max" />
+
+            <TextView
+                android:id="@+id/text_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/selector_white_to_gray"
+                android:textSize="@dimen/text_size_max" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+        <TextView
+            android:id="@+id/progress_textView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/anim_progress_circle"
+            android:gravity="center"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+
+</RelativeLayout>

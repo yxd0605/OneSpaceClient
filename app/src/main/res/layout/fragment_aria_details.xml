@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.eli.oneos.widget.ReboundScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/light_gray"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_square_full_radius_white"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:padding="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_aria_bt" />
+
+                <ImageView
+                    android:id="@+id/iv_state"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_aria_task_complete"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/layout_icon"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="3"
+                    android:padding="2dp"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_max" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:maxLines="2"
+                        android:text="@string/aria_download_size"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+
+                    <TextView
+                        android:id="@+id/tv_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:maxLines="2"
+                        android:text="@string/aria_download_speed"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+
+                    <TextView
+                        android:id="@+id/tv_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:maxLines="2"
+                        android:text="@string/aria_download_time"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:padding="2dp"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_square_full_radius_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:maxLines="2"
+                    android:text="@string/aria_download_dir"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:id="@+id/tv_dir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:maxLines="2"
+                    android:text="@string/aria_download_connections"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:id="@+id/tv_connections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:maxLines="2"
+                    android:text="@string/aria_download_peers"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:id="@+id/tv_peers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:maxLines="2"
+                    android:text="@string/aria_download_peer_len"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:id="@+id/tv_peer_len"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ctrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_square_full_radius_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:maxLines="2"
+                    android:padding="2dp"
+                    android:text="@string/aria_download_speed_limit"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <EditText
+                    android:id="@+id/et_download"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/selector_square_stroke_edittext"
+                    android:ellipsize="end"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:maxLines="2"
+                    android:padding="2dp"
+                    android:text="@string/aria_upload_speed_limit"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <EditText
+                    android:id="@+id/et_upload"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/selector_square_stroke_edittext"
+                    android:ellipsize="end"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save_settings"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_button_bg_primary"
+                android:gravity="center"
+                android:text="@string/save_settings"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_mid" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.eli.oneos.widget.ReboundScrollView>

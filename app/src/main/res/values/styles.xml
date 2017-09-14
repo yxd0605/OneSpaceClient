@@ -1,0 +1,130 @@
+<resources>
+
+    <style name="AppCompatTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/ActivitySlideAnim</item>
+    </style>
+    <style name="AppCompatFullScreen" parent="AppCompatTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar"></style>
+
+    <style name="FullScreenTheme" parent="android:Theme.NoTitleBar.Fullscreen"></style>
+
+    <style name="ActivitySlideAnim" parent="@android:style/Animation.Activity">
+        <!--<item name="android:taskOpenEnterAnimation">@anim/slide_nav_in_from_right</item>
+        <item name="android:taskOpenExitAnimation">@anim/slide_nav_out_to_left</item>
+        <item name="android:taskCloseEnterAnimation">@anim/slide_nav_in_from_left</item>
+        <item name="android:taskCloseExitAnimation">@anim/slide_nav_out_to_right</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/slide_nav_in_from_right</item>
+        <item name="android:taskToFrontExitAnimation">@anim/slide_nav_out_to_left</item>
+        <item name="android:taskToBackEnterAnimation">@anim/slide_nav_in_from_left</item>
+        <item name="android:taskToBackExitAnimation">@anim/slide_nav_out_to_right</item>-->
+
+        <item name="android:activityOpenEnterAnimation">@anim/slide_nav_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_nav_out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_nav_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_nav_out_to_right</item>
+    </style>
+
+    <style name="FullBleedTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- API 14 theme customizations can go here. -->
+        <item name="android:windowAnimationStyle">@style/ActivitySlideAnim</item>
+    </style>
+
+    <style name="DialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_margin">@dimen/layout_dialog_margin</item>
+    </style>
+
+    <style name="NavBarRadioButtonTheme">
+        <item name="android:textSize">@dimen/text_size_nav_bar</item>
+        <item name="android:textColor">@color/selector_txt_nav_bar</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_height">@dimen/layout_nav_bar_height</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:animationDuration">400</item>
+    </style>
+
+    <style name="AnimAlphaEnterAndExit">
+        <item name="android:windowEnterAnimation">@anim/alpha_in_tip</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out_tip</item>
+    </style>
+
+    <style name="UndoRootStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/undo_bar_height</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:layout_marginLeft">@dimen/undo_bar_outer_margin</item>
+        <item name="android:layout_marginRight">@dimen/undo_bar_outer_margin</item>
+        <item name="android:layout_marginBottom">@dimen/undo_bar_outer_margin_bottom</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:maxWidth">@dimen/undo_bar_max_width</item>
+        <item name="android:background">@drawable/bg_status_bar</item>
+    </style>
+
+    <style name="UndoTxtStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/undo_bar_padding</item>
+        <item name="android:paddingRight">@dimen/undo_bar_padding</item>
+        <item name="android:textColor">@color/selector_white_to_gray</item>
+        <item name="android:textSize">@dimen/text_size_min</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="UndoButtonWrapper">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="UndoDividerStyle">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/divider_margin</item>
+        <item name="android:layout_marginBottom">@dimen/divider_margin</item>
+        <item name="android:background">@color/light_gray</item>
+    </style>
+
+    <style name="UndoButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/undo_bar_padding</item>
+        <item name="android:paddingRight">@dimen/undo_bar_padding</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:src">@drawable/selector_button_undo_bar_cancel</item>
+    </style>
+
+    <style name="AnimationAlphaEnterAndExit">
+        <item name="android:windowEnterAnimation">@anim/alpha_appear</item>
+        <item name="android:windowExitAnimation">@anim/alpha_disappear</item>
+    </style>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <com.eli.oneos.widget.TitleBackLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:background="@color/bg_title" />
+
+    <RelativeLayout
+        android:id="@+id/layout_bonded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title">
+
+        <TextView
+            android:id="@+id/txt_bind_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_ssudp_name"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/ssudp_boned"
+            android:textColor="@color/darker"
+            android:textSize="@dimen/text_size_big" />
+
+        <TextView
+            android:id="@+id/txt_ssudp_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_unbind"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/selector_gray_to_primary"
+            android:textSize="@dimen/text_size_sm" />
+
+        <Button
+            android:id="@+id/btn_unbind"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/selector_square_stroke_full_radius_primary_pressed"
+            android:gravity="center"
+            android:text="@string/unbind"
+            android:textColor="@color/selector_primary_to_pressed"
+            android:textSize="@dimen/text_size_mid" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_bind_ssudp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/bind_now"
+        android:textColor="@color/selector_gray_to_primary"
+        android:textSize="@dimen/text_size_big" />
+
+</RelativeLayout>

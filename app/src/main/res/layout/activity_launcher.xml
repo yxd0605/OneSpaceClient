@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/iv_welcome_logo"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/txt_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo_welcome" />
+
+    <TextView
+        android:id="@+id/txt_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/text_size_max" />
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/txt_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"
+        app:mlpb_enable_circle_background="false"
+        app:mlpb_progress_color="@color/primary"
+        app:mlpb_progress_stoke_width="2dp"
+        app:mlpb_progress_text_visibility="invisible"
+        app:mlpb_show_arrow="false" />
+
+</RelativeLayout>

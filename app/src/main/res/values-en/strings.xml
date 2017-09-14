@@ -1,0 +1,539 @@
+<resources>
+    <string name="app_name">OneSpace</string>
+    <string name="upload_to_onespace">Upload to OneSpace</string>
+
+    <!-- Common String-->
+    <string name="title_back">Back</string>
+    <string name="ok">OK</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="tips">Tips</string>
+    <string name="warning">Warning</string>
+    <string name="paste">Paste</string>
+    <string name="modify">Apply</string>
+    <string name="modifying">Modifying&#8230;</string>
+    <string name="modify_succeed">Modified succeed</string>
+    <string name="modify_failed">Modified failed</string>
+    <string name="delete">Delete</string>
+    <string name="open">Open</string>
+    <string name="dialog_continue">Continue</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="all_loaded">All Loaded</string>
+    <string name="connection_refused">Unable to connect to your OneSpace, please check the device and network status!</string>
+    <string name="network_not_available">The network is not available, please check it!</string>
+    <string name="oneos_version_mismatch">Your OneSpace version is too low, please upgrade to OneOS v3.x version!</string>
+    <string name="fmt_oneos_version_upgrade" formatte="false">Your OneSpace version is too low，please upgrade to OneOS version v%s and above!</string>
+    <string name="oneos_version_check_failed">Detection system version fails, please try again!</string>
+    <string name="tips_title_version_mismatch">OneOS Version Mismatch</string>
+    <string name="wifi_not_available">The WiFi is not available, please check it!</string>
+    <string name="goto_settings">Settings</string>
+    <string name="error_json_exception">Failed to parse protocol</string>
+    <string name="operate_failed">Operation failed</string>
+    <string name="app_exception">Application Exception</string>
+    <string name="please_login_onespace">Please login OneSpace</string>
+    <string name="please_login_onespace_with_admin">Please use the administrator user login OneSpace</string>
+    <string name="confirm_download_not_wifi">Confirm download by using non WiFi access!</string>
+    <string name="confirm_upload_not_wifi">Confirm upload by using non WiFi access!</string>
+    <string name="app_exception_to_exit">crashed, collecting information, exit after 3s...</string>
+    <string name="press_again_to_exit">Press again to exit</string>
+    <string name="tips_exit_if_has_task">You have unfinished upload/download tasks, all tasks will be interrupted if you continue to exit!</string>
+    <string name="exit">Exit</string>
+    <string name="failed_get_upload_file">Failed to get upload file path</string>
+    <string name="perm_denied_storage">Please grant permissions to access your external storage!</string>
+
+    <!-- File Operation -->
+    <string name="file_type_private">My Files</string>
+    <string name="file_type_public">Public Files</string>
+    <string name="file_type_doc">Document</string>
+    <string name="file_type_pic">Picture</string>
+    <string name="file_type_audio">Audio</string>
+    <string name="file_type_video">Video</string>
+    <string name="file_type_cycle">Recycle Bin</string>
+    <string name="file_type_download">Download</string>
+    <string name="file_type_app">App</string>
+
+    <string name="details_file">Details</string>
+    <string name="open_file">Open</string>
+    <string name="copy_file">Copy</string>
+    <string name="move_file">Move</string>
+    <string name="delete_file">Delete</string>
+    <string name="rename_file">Rename</string>
+    <string name="download_file">Download</string>
+    <string name="upload_file">upload</string>
+    <string name="encrypt_file">Encrypt</string>
+    <string name="decrypt_file">Decrypt</string>
+    <string name="chmod_file">Permission</string>
+    <string name="attr_file">Attribute</string>
+    <string name="share_file">Share</string>
+    <string name="clean_recycle_file">Clear</string>
+    <string name="tip_select_file">Please select item first</string>
+    <string name="tip_attr_file">Attribute</string>
+    <string name="getting_file_attr">Querying&#8230;</string>
+    <string name="file_attr_path">Path：</string>
+    <string name="file_attr_size">Size：</string>
+    <string name="file_attr_files">Files：</string>
+    <string name="file_attr_folders">Folder：</string>
+    <string name="tail_file_attr_size_bytes">bytes</string>
+    <string name="tail_file_attr_folders">folders</string>
+    <string name="tail_file_attr_files">files</string>
+    <string name="file_attr_permission">Permission：</string>
+    <string name="file_attr_uid">UID：</string>
+    <string name="file_attr_gid">GID：</string>
+    <string name="file_attr_read">Readable：</string>
+    <string name="file_attr_write">Writable：</string>
+    <string name="file_attr_time">Time：</string>
+    <string name="tip_chmod_file">File Permission</string>
+    <string name="chmod_file_group">Group User：</string>
+    <string name="chmod_file_other">Other User：</string>
+    <string name="permission_read">Readable</string>
+    <string name="permission_write">Writable</string>
+    <string name="tip_delete_file">Confirm to delete the selected file?</string>
+    <string name="deleting_file">Deleting_file&#8230;</string>
+    <string name="delete_file_success">Delete succeed</string>
+    <string name="delete_file_failed">Delete failed</string>
+    <string name="renaming_file">Renaming&#8230;</string>
+    <string name="tip_rename_file">Rename File</string>
+    <string name="hint_rename_file">Please enter a new file name</string>
+    <string name="rename_file_success">Rename succeed</string>
+    <string name="rename_file_failed">Rename failed</string>
+    <string name="making_folder">Creating&#8230;</string>
+    <string name="tip_new_folder">Create folder</string>
+    <string name="hint_new_folder">Please enter a folder name</string>
+    <string name="default_new_folder">New folder</string>
+    <string name="new_folder_success">Create succeed</string>
+    <string name="new_folder_failed">Create failed</string>
+    <string name="encrypting_file">Encrypting&#8230;</string>
+    <string name="tip_encrypt_file">Encrypt file</string>
+    <string name="warning_encrypt_file">Warning: please remember the password, otherwise it will not be able to decrypt the file!</string>
+    <string name="hint_encrypt_pwd">Please enter password</string>
+    <string name="hint_confirm_encrypt_pwd">Please confirm password</string>
+    <string name="error_confirm_pwd">Password does not match</string>
+    <string name="encrypt_file_success">File encryption succeed</string>
+    <string name="encrypt_file_failed">File encryption failed</string>
+    <string name="decrypting_file">Decrypting&#8230;</string>
+    <string name="tip_decrypt_file">Decrypt file</string>
+    <string name="hint_decrypt_pwd">Please enter password</string>
+    <string name="decrypt_file_success">File decryption succeed</string>
+    <string name="decrypt_file_failed">File decryption failed</string>
+    <string name="tip_move_file">Move to&#8230;</string>
+    <string name="moving_file">Moving&#8230;</string>
+    <string name="chmod_ing_file">Modifying&#8230;</string>
+    <string name="tip_upload_file">Upload to&#8230;</string>
+    <string name="move_file_success">Move file succeed</string>
+    <string name="move_file_failed">Move file failed</string>
+    <string name="tip_copy_file">Paste to&#8230;</string>
+    <string name="copying_file">Pasting&#8230;</string>
+    <string name="copy_file_success">Paste file succeed</string>
+    <string name="copy_file_failed">Paste file failed</string>
+    <string name="title_clean_recycle_file">Clean Recycle Bin</string>
+    <string name="tip_clean_recycle_file">All files will be permanently deleted if you clean the recycle bin</string>
+    <string name="cleaning_recycle">Cleaning&#8230;</string>
+    <string name="chmod_file_success">Modify permission succeed</string>
+    <string name="clean_recycle_success">Clean recycle bin succeed</string>
+    <string name="clean_recycle_failed">Clean recycle bin failed</string>
+    <string name="share_file_success">Share succeed</string>
+    <string name="clean_now">Clean</string>
+
+    <!-- Navigation Bar Title -->
+    <string name="nav_title_local">Local</string>
+    <string name="nav_title_cloud">OneSpace</string>
+    <string name="nav_title_transfer">Transfer</string>
+    <string name="nav_title_tool">Tools</string>
+
+    <!-- Login Activity -->
+    <string name="title_login">OneSpace Login</string>
+    <string name="login">Login</string>
+    <string name="title_enter_user">Username</string>
+    <string name="title_enter_pwd">Password</string>
+    <string name="title_select_ip">IP</string>
+    <string name="title_enter_port">Port</string>
+    <string name="hint_enter_user">Please enter username</string>
+    <string name="hint_enter_pwd">Please enter password</string>
+    <string name="hint_select_ip">Please enter OneSpace IP address</string>
+    <string name="hint_enter_port">Please enter OneSpace port</string>
+    <string name="tip_invalid_port">Please enter a valid port</string>
+    <string name="logining">Logining&#8230;</string>
+    <string name="scanning_device">Search OneSpace&#8230;</string>
+    <string name="tip_title_research">Search Device</string>
+    <string name="tip_search_again">No search to a OneSpace, Search again?</string>
+    <string name="research_now">Research</string>
+    <string name="getting_device_mac">Getting Mac&#8230;</string>
+    <string name="error_get_device_mac">Get OneSpace Mac address failed, please try to login again</string>
+    <string name="error_login_user_or_pwd">Incorrect username or password</string>
+
+    <!-- for SSUDP -->
+    <string name="remote_login">Remote Access</string>
+    <string name="tip_title_bond_ssudp">Bind SSUDP？</string>
+    <string name="tip_bond_ssudp">After binding, you can access OneSpace using SSUDP</string>
+    <string name="binding">Binding&#8230;</string>
+    <string name="ssudp_connecting">Connecting&#8230;</string>
+    <string name="bind_now">Bind Now</string>
+    <string name="bind_succeed">Bind Succeed</string>
+    <string name="bind_failed">Bind Failed</string>
+    <string name="tip_title_bond_ssudp_failed">SSUDP Bind Failed</string>
+    <string name="tip_title_connect_ssudp_failed">Connect OneSpace Failed</string>
+    <string name="tip_bond_ssudp_failed">Your OneSpace does not support SSUDP, please contact the official technical support!</string>
+    <string name="tip_ssudp_open_file_failed">SSUDP does not support open file online, please open after download!</string>
+    <string name="tip_title_ssudp_disconnect">SSUDP Disconnected</string>
+    <string name="tip_title_ssudp_connect">SSUDP Connected</string>
+
+    <!-- Cloud Fragment -->
+    <string name="root_dir_name_private">Private</string>
+    <string name="root_dir_name_public">Public</string>
+    <string name="root_dir_name_recycle">Recycle</string>
+    <string name="root_dir_name_sdcard">SDCard</string>
+    <string name="root_dir_name_download">Download</string>
+    <string name="root_dir_all">All</string>
+    <string name="action_upload_file">Upload File</string>
+    <string name="action_new_folder">New Folder</string>
+    <string name="file_order_time">Order in Time</string>
+    <string name="file_order_name">Order in Name</string>
+    <string name="file_viewer_list">List display</string>
+    <string name="file_viewer_grid">Grid display</string>
+
+    <string name="hint_search">Please input the file name to search</string>
+    <string name="hint_select_file">Please select file</string>
+    <string name="select_all">Select All</string>
+    <string name="select_none">Select None</string>
+    <string name="selected_item">Selected %s Item</string>
+    <string name="empty_file_list">Empty directory</string>
+    <string name="error_access_dir_perm_deny">No permission to access this directory</string>
+    <string name="error_manage_perm_deny">Permission Denied</string>
+    <string name="error_get_file_list">Failed to get file list</string>
+    <string name="fmt_time_line">yyyy-MM</string>
+    <string name="error_open_encrypt_file">Sorry, unable to view encrypted files</string>
+    <string name="error_open_encrypt_pic">Sorry, unable to view encrypted pictures</string>
+    <string name="error_app_not_found_to_open_file">Can not find an application to open this file</string>
+    <string name="gap_symbol">/</string>
+    <string name="tip_start_download">Start Download: </string>
+    <string name="tip_start_upload">Start Upload: </string>
+
+    <!-- Transfer Fragment -->
+    <string name="download_list">Download</string>
+    <string name="upload_list">Upload</string>
+    <string name="download_record">Download History</string>
+    <string name="downloading_list">Downloading List</string>
+    <string name="upload_record">Upload History</string>
+    <string name="uploading_list">Uploading List</string>
+    <string name="start_all">Start All</string>
+    <string name="pause_all">Pause All</string>
+    <string name="delete_all">Delete All</string>
+    <string name="empty_transfer_list">No transmission</string>
+    <string name="cancel_and_delete_local">Delete local file</string>
+    <string name="confirm_cancel_download">Confirm cancel the download?</string>
+    <string name="confirm_cancel_upload">Confirm cancel the upload?</string>
+    <string name="cancel_download">Download Canceled</string>
+    <string name="cancel_upload">Upload canceled</string>
+    <string name="waiting">Waiting&#8230;</string>
+    <string name="download_pause">Download Pause</string>
+    <string name="download_failed">Download Failed</string>
+    <string name="upload_pause">Upload Pause</string>
+    <string name="refuse_upload_folder">Do not support upload folder</string>
+
+    <!-- Download of upload failed information -->
+    <string name="local_space_insufficient">Mobile phone space insufficient</string>
+    <string name="server_space_insufficient">Space insufficient</string>
+    <string name="request_server_exception">Request failed</string>
+    <string name="decoding_exception">Decoding exception</string>
+    <string name="io_exception">IO Exception</string>
+    <string name="file_not_found">File not found</string>
+    <string name="touch_file_failed">Create file failed</string>
+    <string name="socket_timeout">Connect Timeout</string>
+    <string name="unknown_exception">Unknown Exception</string>
+    <string name="wifi_connect_break">Network interruption</string>
+
+    <!-- Tools Fragment -->
+    <string name="tool_setting">Settings</string>
+    <string name="tool_backup_photo">Backup Album</string>
+    <string name="tool_backup_file">Backup Files</string>
+    <string name="tool_sync_contact">Backup Contacts</string>
+    <string name="tool_sync_sms">Backup Short Messages</string>
+    <string name="tool_app">App Management</string>
+    <string name="tool_aria">Aria Download</string>
+    <string name="tool_system_management">System Management</string>
+    <string name="tool_user_management">User Management</string>
+    <string name="tool_hd_info">Hard Disk Information</string>
+    <string name="tool_system_status">System Status</string>
+    <string name="tool_logout">Logout</string>
+
+    <string name="device_power_off">Power Off</string>
+    <string name="cancel_opt_power">Cancel</string>
+    <string name="device_reboot">Reboot</string>
+    <string name="confirm_reboot_device">Confirm reboot OneSpace?</string>
+    <string name="confirm_power_off_device">Confirm shutdown OneSpace?</string>
+    <string name="power_off_device">Shutting down OneSpace&#8230;</string>
+    <string name="rebooting_device">Rebooting OneSpace&#8230;</string>
+    <string name="success_power_off_device">OneSpace shutdown succeed</string>
+    <string name="success_reboot_device">OneSpace reboot succeed</string>
+    <string name="failed_power_off_device">OneSpace shutdown failed</string>
+    <string name="failed_reboot_device">OneSpace reboot failed</string>
+    <string name="confirm_logout">Confirm Logout?</string>
+    <string name="warning_logout">Auto-Backup/Download/Upload will be canceled if you logout!</string>
+
+    <!-- Settings Activity -->
+    <string name="title_settings">Settings</string>
+    <string name="settings">Settings</string>
+    <string name="not_login">Not Login</string>
+    <string name="current_user">Current User</string>
+    <string name="current_path">Current Download path：</string>
+    <string name="clean_record">Clean Transfer History</string>
+    <string name="clean_record_success">Clean succeed</string>
+    <string name="clean_record_failed">Clean failed</string>
+    <string name="setting_success">Setting succeed</string>
+    <string name="setting_failed">Setting failed</string>
+    <string name="confirm_clear_record">Confirm clean history?</string>
+    <string name="set_default_path">Set Download Path</string>
+    <string name="only_wifi_preview_pic">Preview Pictures only in WiFi</string>
+    <string name="not_wifi_download_tips">Non WiFi Download/Upload Tips</string>
+    <string name="title_onespace_forum">OneSpace Forum</string>
+    <string name="title_onespace_website">OneSpace Official Website</string>
+    <string name="about_onespace">About OneSpace</string>
+    <string name="space_total">OneSpace Total Space</string>
+    <string name="space_user">Current User Space</string>
+    <string name="space_local">SDCard Space</string>
+    <string name="sd_state_unmounted">No SDCard</string>
+
+    <!-- App Upgrade -->
+    <string name="get_version_exception">Failed to get version</string>
+    <string name="get_version_from_server_exception">Failed to get new version information</string>
+    <string name="is_latest_version">Currently is the latest version</string>
+    <string name="have_new_version_app">New version:&#160;V&#160;</string>
+    <string name="oneos_minimum_version">Note: Minimum OneOS version&#160;v</string>
+    <string name="confirm_cancel_download_app">Confirm to download app?</string>
+    <string name="interrupt_download">Cancel</string>
+    <string name="continue_download">Continue</string>
+    <string name="check_app_version">Check APP version&#8230;</string>
+    <string name="tips_upgrade_oneos_version_low" formatted="false">The current device OneOS version is v%s, lower than the App required minimum version v%s, we recommend that you upgrade to the latest OneOS version before upgrading App, otherwise the App will not work!</string>
+    <string name="upgrade_later">Upgrade Later</string>
+    <string name="upgrade_app_now">Upgrade Now</string>
+    <string name="upgrade_next_time">Upgrade Next</string>
+    <string name="ignore_this_version">Ignore This Version</string>
+    <string name="download_new_app">Downloading new APP</string>
+    <string name="download_app_failed">Download failed, please try again</string>
+    <string name="tip_oneos_new_version_upgrade">Your device has a new OneOS can be upgraded, visit http://onespace.cc/download/oneos/ check for updates!</string>
+
+    <!-- Space Activity -->
+    <string name="user_space_info">Your space has been used</string>
+    <string name="title_local">SDCard Space</string>
+    <string name="title_server">OneSpace Total Space</string>
+    <string name="title_user">Current User Space</string>
+    <string name="total_space">Total:</string>
+    <string name="available_space">Available:</string>
+    <string name="used_space">Used:</string>
+    <string name="query_space_failure">Query space failed</string>
+    <string name="device_dev_sda">HD A</string>
+    <string name="device_dev_sdb">HD B</string>
+
+    <!-- About Activity -->
+    <string name="title_about">About OneSpace</string>
+    <string name="copyright_statement">Powered by OneSpace</string>
+    <string name="website_onespace">www.onespace.cc</string>
+    <string name="start_download_file">Start download file&#8230;</string>
+
+    <!-- Apps Activity -->
+    <string name="title_apps_phone">Phone</string>
+    <string name="getting_app_list">Getting app list&#8230;</string>
+    <string name="error_open_app">Sorry, Cannot open this application</string>
+    <string name="error_get_app_details">Do not get app information</string>
+    <string name="can_not_uninstall">Cannot Uninstall</string>
+    <string name="app_not_found_exception">App not found</string>
+    <string name="confirm_uninstall_plugin">Confirm uninstall&#160;&#160;</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="uninstalling_plugin">Uninstalling&#8230;</string>
+    <string name="opening_plugin">Opening&#8230;</string>
+    <string name="closing_plugin">Closing&#8230;</string>
+    <string name="confirm_open_plugin">Confirm open&#160;&#160;</string>
+    <string name="confirm_close_plugin">Confirm close&#160;&#160;</string>
+    <string name="app_status">Status：&#160;</string>
+    <string name="app_state_getting">Getting&#8230;</string>
+    <string name="app_state_on">Running</string>
+    <string name="app_state_off">Stopped</string>
+    <string name="app_state_unknown">Unknown</string>
+
+    <!-- Aria Download Activity -->
+    <string name="enter_url_hint">HTTP、FTP or Magnet</string>
+    <string name="select_torrent">Select Torrent</string>
+    <string name="add_aria_download">Add Aria download task</string>
+    <string name="download_to_onespace">Download to OneSpace</string>
+    <string name="select_torrent_file">Please select torrent file</string>
+    <string name="dir_without_torrent">Empty directory</string>
+    <string name="aria_download_tips">Please enter a file link or upload a torrent file</string>
+    <string name="aria_download_path_tips">Aria download files will save on public directory under download</string>
+    <string name="confirm_del_active_aria">Delete the Aria download task?</string>
+    <string name="confirm_del_stopped_aria">Delete the Aria download history?</string>
+    <string name="aria_task_file_list">File List</string>
+    <string name="aria_task_details">Task Details</string>
+    <string name="title_aria">Aria Download</string>
+    <string name="title_aria_task_details">Aria Download Task Details</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="aria_global_settings">Aria Settings</string>
+    <string name="aria_upload_speed_limit">Upload speed limit:</string>
+    <string name="aria_download_speed_limit">Download speed limit:</string>
+    <string name="aria_download_max_concurrent">Max concurrent:</string>
+    <string name="aria_download_piece_length">Minimum peer length:</string>
+    <string name="aria_download_dir">Download directory:</string>
+    <string name="aria_download_size">File size:</string>
+    <string name="aria_download_speed">Download speed:</string>
+    <string name="aria_download_time">Remaining time:</string>
+    <string name="aria_download_connections">Connections:</string>
+    <string name="aria_download_peers">Peers:</string>
+    <string name="aria_download_peer_len">Peer length:</string>
+    <string name="please_enter_limit">Please enter limit size</string>
+    <string name="success_save_aria_setting">Aria setting suceed</string>
+    <string name="request_aria_settings">Getting Aria configuration&#8230;</string>
+    <string name="request_set_aria_settings">Configuring Aria&#8230;</string>
+    <string name="error_request_aria_params">Get Aria configuration failed</string>
+    <string name="error_set_aria_params">Configuration Aria failed</string>
+    <string name="fmt_add_aria_task_success">Add %s Aria download succeed!</string>
+    <string name="fmt_add_aria_task_failed">Add %s Aria download failed!</string>
+    <string name="tips_no_sd_card">No SD card detected, please check it!</string>
+    <string name="connect_aria_exception">Aria is offline, please open it</string>
+
+    <!--Backup Photo Activity -->
+    <string name="title_backup_photo">Backup Album</string>
+    <string name="unknown_photo_date">unknown time</string>
+    <string name="remain">Remain</string>
+    <string name="counts">&#160;</string>
+    <string name="backup_dir_shown">Target Directory：&#160;</string>
+    <string name="backup_complete">Backup Complete</string>
+    <string name="backup_closed">Backup Closed</string>
+    <string name="auto_backup_photo">Auto Backup Album</string>
+    <string name="title_reset_backup">Reset Backup Album</string>
+    <string name="tips_reset_backup">It will be re-check and back up all your photos and videos</string>
+    <string name="success_reset_backup">Reset Succeed!</string>
+    <string name="reset_now">Reset Now</string>
+    <string name="auto_backup_only_wifi">Backup only in WiFi</string>
+
+    <!-- Backup File Activity -->
+    <string name="title_backup_file">Backup Files</string>
+    <string name="auto_backup_file">Auto Backup Files</string>
+    <string name="backup_file_list">Backup Directory</string>
+    <string name="fmt_backup_folder_count">&#160;(%d folders)</string>
+    <string name="tips_empty_backup_file">No folder needs to backup</string>
+    <string name="title_backup_file_list">Auto Backup Directory</string>
+    <string name="title_add_backup_file">Add Backup Directory</string>
+    <string name="confirm_add_backup_file">Confirm backup this directory?</string>
+    <string name="confirm_backup">Backup</string>
+    <string name="continue_add_backup">Continue</string>
+    <string name="error_fmt_add_backup_dir_count">You can add up to %d folder</string>
+    <string name="tips_add_backup_dir_repeat">Continue to add the directory may cause duplicate files</string>
+    <string name="tips_add_backup_album_repeat">Continue to add the directory may cause duplicate files if open auto backup album</string>
+    <string name="error_backup_dir_exist">The directory has been added</string>
+    <string name="error_backup_without_read_permission">No read permission, you can not backup the directory</string>
+    <string name="delete_backup_file">Delete backup directory</string>
+    <string name="tips_confirm_delete_backup_dir">Confirm delete the directory?</string>
+    <string name="tips_confirm_add_backup_dir">Confirm backup the directory?</string>
+    <string name="is_backup">Backuping：</string>
+    <string name="add_backup_file">Add Backup</string>
+    <string name="cancel_backup_file">Cancel Backup</string>
+    <string name="tips_open_backup_file">Confirm enable to backup the directory?</string>
+    <string name="tips_close_backup_file">Confirm disable to backup the directory?</string>
+
+    <!--Backup Contacts and SMS-->
+    <string name="title_sync_contacts">Backup Contacts</string>
+    <string name="last_sync_time">Last backup time：</string>
+    <string name="sync_contacts_to_server">Backup Contacts to OneSpace</string>
+    <string name="recover_contacts_to_phone">Recovery Contacts to phone</string>
+    <string name="title_sync_sms">Backup Short Messages</string>
+    <string name="sync_sms_to_server">Backup SMS to OneSpace</string>
+    <string name="recover_sms_to_phone">Recovery SMS to phone</string>
+    <string name="recovering">Recovering&#8230;</string>
+    <string name="recover_waiting">Waiting&#8230;</string>
+    <string name="recover_prepare">Prepare recovery&#8230;</string>
+    <string name="recover_success">Recovery Complete</string>
+    <string name="recover_failed">Recovery Failed</string>
+    <string name="error_export_sms">Backup SMS error</string>
+    <string name="error_export_contacts">Backup Contacts error</string>
+    <string name="error_import_sms">Recovery SMS error</string>
+    <string name="error_import_contacts">Recovery Contacts error</string>
+    <string name="no_sms_to_recover">No SMS to recovery</string>
+    <string name="no_contact_to_recover">No Contact to recovery</string>
+    <string name="syncing">Backuping&#8230;</string>
+    <string name="exporting">Exporting&#8230;</string>
+    <string name="sync_waiting">Waiting&#8230;</string>
+    <string name="not_sync">Not Backup</string>
+    <string name="sync_failed">Backup Failed</string>
+    <string name="sync_success">Backup Succeed</string>
+    <string name="wait_to_sync">Waiting Operation</string>
+    <string name="no_sms_to_sync">No SMS to backup</string>
+    <string name="no_contact_to_sync">No Contact to backup</string>
+    <string name="sync_exception_download">Backup failed, please try again</string>
+    <string name="recovery_exception_upload">Recovery failed, please try again</string>
+    <string name="permission_denied_backup_contact">To backup your contacts, please grant permissions to access your contacts!</string>
+    <string name="permission_denied_backup_sms">To backup your sms, please grant permissions to access your sms!</string>
+
+    <!-- SetPath Activity-->
+    <string name="set_dir_to_download_path">Set to download directory</string>
+    <string name="confirm_set_to_download_path">Confirm setting?</string>
+    <string name="empty_directory">Empty directory</string>
+    <string name="confirm_set_path">Confirm Setting</string>
+    <string name="download_path_not_set">not setting</string>
+    <string name="error_path_without_write_permission">Permission Denied</string>
+
+    <!-- User Management -->
+    <string name="title_user_management">User Management</string>
+    <string name="getting_user_list">Getting user list&#8230;</string>
+    <string name="get_space_failed">query space failure</string>
+    <string name="user_manage_delete">Delete</string>
+    <string name="user_manage_password">Password</string>
+    <string name="user_manage_limit">Limit</string>
+    <string name="unlimited">unlimited</string>
+    <string name="delete_user">Delete User</string>
+    <string name="warning_delete_user">Warning：This will completely remove all data of this user</string>
+    <string name="deleting_user">Deleting user&#8230;</string>
+    <string name="delete_user_succeed">Delete succeed</string>
+    <string name="delete_user_failed">Delete failed</string>
+    <string name="add_user">Add User</string>
+    <string name="error_user_name_length">Username needs at least 3 characters</string>
+    <string name="adding_user">Adding user&#8230;</string>
+    <string name="add_user_succeed">Add succeed</string>
+    <string name="add_user_failed">Add failed</string>
+    <string name="modify_user_space">Modify User Space</string>
+    <string name="tips_modify_user_space">Please enter user space</string>
+    <string name="tips_invalid_user_space">Please enter a valid limit space</string>
+    <string name="reset_user_pwd">Reset Password</string>
+    <string name="tips_reset_user_pwd">Reset user password to 123456</string>
+    <string name="resetting">Resetting&#8230;</string>
+    <string name="reset_succeed">Reset succeed</string>
+    <string name="reset_failed">Reset failed</string>
+    <string name="modify_user_pwd">Modify Password</string>
+    <string name="warning_modify_user_pwd">Warning: Keep in mind that the new password you set</string>
+    <string name="enter_new_pwd">Please enter a new password</string>
+    <string name="confirm_new_pwd">Please confirm the new password</string>
+
+    <!-- System Status Activity -->
+    <string name="title_system_status">System Status</string>
+    <string name="querying_info">Querying&#8230;</string>
+    <string name="fmt_label_cpu_load" formatted="false">CPULoad&#160;(Used:%4s)</string>
+    <string name="fmt_label_memory" formatted="false">Memory&#160;(Total:%s&#160;/&#160;Used:%s&#160;/&#160;Available:%s)</string>
+    <string name="fmt_label_eth" formatted="false">WireNIC：%s&#160;(Receive:%s&#160;/&#160;Send:%s&#160;)</string>
+
+    <!-- HardDisk Info Activity -->
+    <string name="title_hd_info">Hard Disk Information</string>
+    <string name="hd_info_tmp">Temperature:</string>
+    <string name="hd_info_time">Time:</string>
+    <string name="hd_info_model">Model:</string>
+    <string name="hd_info_serial">Serial Num:</string>
+    <string name="hd_info_capacity">Disk Size:</string>
+    <string name="fmt_hd_info_tmp" formatted="false">%d&#160;℃</string>
+    <string name="fmt_oneos_mode" formatted="false">Current Mode：%s</string>
+    <string name="hint_enter_ssupd_name">Please enter device name</string>
+    <string name="ssudp_boned">SSUDP bound</string>
+    <string name="tip_unbind_ssudp">Confirm unbind SSUDP?</string>
+    <string name="title_bind_ssudp">Bind SSUDP</string>
+    <string name="title_ssudp_name">Device Name</string>
+    <string name="tool_bind_ssudp">SSUDP Bind</string>
+    <string name="unbind">Unbind</string>
+    <string name="unbind_succeed">Unbind success</string>
+    <string name="more">More</string>
+    <string name="extract_file">Unzip</string>
+    <string name="formating">Formatting&#8230;</string>
+    <string name="hd_lvm">LVM Mode</string>
+    <string name="hd_raid0">RAID0 Mode</string>
+    <string name="hd_raid1">RAID1 Mode</string>
+    <string name="hd_format">Format Hard Disk</string>
+    <string name="hd_more_title">Select Hard Disk Mode</string>
+    <string name="hd_one_title">Format Hard Disk</string>
+    <string name="hd_raid0_info"></string>
+</resources>

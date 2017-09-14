@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_square_loading_dialog"
+        android:gravity="center"
+        android:minWidth="90dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:mlpb_enable_circle_background="false"
+            app:mlpb_progress_color="@color/white"
+            app:mlpb_progress_stoke_width="4dp"
+            app:mlpb_progress_text_visibility="invisible"
+            app:mlpb_show_arrow="false" />
+
+        <TextView
+            android:id="@+id/txt_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_sm"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

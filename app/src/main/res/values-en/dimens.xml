@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="layout_login_pre_width">80dp</dimen>
+
+</resources>

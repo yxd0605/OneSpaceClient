@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|bottom"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/layout_power_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/selector_button_power_off"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/tool_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_power_off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tool_icon"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/device_power_off"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_mid" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/selector_button_reboot"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/tool_icon_right"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_reboot" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tool_icon_right"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/device_reboot"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_mid" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_square_full_radius_white_gray"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="@string/cancel_opt_power"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_mid" />
+
+</LinearLayout>

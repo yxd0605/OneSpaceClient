@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_title_back" />
+
+        <TextView
+            android:id="@+id/txt_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/btn_back"
+            android:text="@string/title_back"
+            android:textColor="@color/selector_white_to_gray"
+            android:textSize="@dimen/text_size_mid" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/title_add_backup_file"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btn_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/selector_button_up"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_confirm"
+        android:layout_below="@+id/layout_title">
+
+        <ListView
+            android:id="@+id/listview_path"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/line_list_view"
+            android:dividerHeight="@dimen/line_list_divider_height"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:id="@+id/layout_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_content_empty" />
+
+            <TextView
+                android:id="@+id/txt_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/empty_directory"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_mid" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_common_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button_bg_primary"
+        android:enabled="false"
+        android:text="@string/confirm_add_backup_file"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_mid" />
+
+</RelativeLayout>

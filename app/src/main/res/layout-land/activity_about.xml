@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <com.eli.oneos.widget.TitleBackLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:background="@color/bg_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/empty_layout"
+        android:layout_below="@+id/layout_title">
+
+        <ImageView
+            android:id="@+id/logo_eli_tech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_product" />
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_eli_tech"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_size_max" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/logo_eli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_eli" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/copyright_statement"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_min" />
+
+        <TextView
+            android:id="@+id/txt_website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/website_onespace"
+            android:textColor="@color/selector_primary_to_pressed"
+            android:textSize="@dimen/text_size_min" />
+    </LinearLayout>
+
+</RelativeLayout>

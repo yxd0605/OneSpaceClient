@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/layout_nav_bar_height"
+    android:background="@color/bg_manage_bar"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_nav_weight"
+        android:layout_above="@+id/radiogroup"
+        android:background="@color/line_nav_bar" />
+
+    <LinearLayout
+        android:id="@+id/layout_root_manage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_nav_radio_height"
+        android:background="@color/bg_manage_bar"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+</LinearLayout>

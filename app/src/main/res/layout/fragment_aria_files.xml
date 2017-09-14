@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.eli.oneos.widget.ReboundScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none">
+
+    <com.eli.oneos.widget.StickListView
+        android:id="@+id/listview_files"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/line_list_view"
+        android:dividerHeight="@dimen/line_list_divider_height"
+        android:listSelector="@android:color/transparent" />
+
+</com.eli.oneos.widget.ReboundScrollView>

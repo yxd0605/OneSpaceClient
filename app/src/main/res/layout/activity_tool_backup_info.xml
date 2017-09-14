@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.eli.oneos.widget.TitleBackLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:background="@color/bg_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/layout_title"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <com.eli.oneos.widget.AnimCircleProgressBar xmlns:circleProgress="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressbar"
+            android:layout_width="@dimen/layout_anim_progress_width"
+            android:layout_height="@dimen/layout_anim_progress_width"
+            android:layout_centerInParent="true"
+            circleProgress:bg_color="0x99FFFFFF"
+            circleProgress:fill="false"
+            circleProgress:max="100"
+            circleProgress:paint_color="@color/front_anim_progress_bar"
+            circleProgress:paint_weight="13dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txt_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_anim_progress" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/txt_progress"
+                    android:gravity="bottom"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="%"
+                    android:textColor="@color/text_anim_progress"
+                    android:textSize="@dimen/text_size_mid" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_state"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="@string/wait_to_sync"
+                android:textColor="@color/text_anim_progress"
+                android:textSize="@dimen/text_size_mid" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.eli.oneos.widget.ReboundScrollView
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/btn_sync_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/selector_square_stroke_full_radius_primary_pressed"
+                android:enabled="false"
+                android:text="@string/sync_contacts_to_server"
+                android:textColor="@color/selector_primary_to_pressed"
+                android:textSize="@dimen/text_size_mid" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+
+            <Button
+                android:id="@+id/btn_recover_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/selector_square_stroke_full_radius_primary_pressed"
+                android:enabled="false"
+                android:text="@string/recover_contacts_to_phone"
+                android:textColor="@color/selector_primary_to_pressed"
+                android:textSize="@dimen/text_size_mid" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/sync_time_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/arrow_top"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="@string/last_sync_time"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:id="@+id/sync_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:singleLine="true"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+        </LinearLayout>
+    </com.eli.oneos.widget.ReboundScrollView>
+</RelativeLayout>

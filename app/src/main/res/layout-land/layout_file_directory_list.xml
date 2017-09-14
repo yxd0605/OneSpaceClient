@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_filelist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.eli.oneos.widget.pullrefresh.PullToRefreshListView
+        android:id="@+id/listview_filelist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/line_list_view"
+        android:dividerHeight="@dimen/line_list_divider_height"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never" />
+
+    <com.eli.oneos.widget.pullrefresh.PullToRefreshGridView
+        android:id="@+id/gridview_filelist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/line_list_view"
+        android:dividerHeight="@dimen/line_list_divider_height"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="false"
+        android:gravity="center"
+        android:headerDividersEnabled="false"
+        android:horizontalSpacing="5dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="6"
+        android:overScrollMode="never"
+        android:paddingBottom="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_empty_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_content_empty" />
+
+        <TextView
+            android:id="@+id/txt_empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/empty_file_list"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_mid" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_empty_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_content_empty" />
+
+        <TextView
+            android:id="@+id/txt_empty_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/empty_file_list"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_mid" />
+    </LinearLayout>
+
+</RelativeLayout>

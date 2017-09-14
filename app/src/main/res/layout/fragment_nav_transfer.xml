@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/segmented_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:background="@color/primary"
+        android:padding="6dp">
+
+        <com.eli.lib.segementgroup.SegmentedGroup
+            android:id="@+id/segmented_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/segmented_download"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/download_list"
+                android:textColor="@color/selector_color_txt_segment"
+                android:textSize="@dimen/text_size_mid" />
+
+            <RadioButton
+                android:id="@+id/segmented_upload"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/upload_list"
+                android:textColor="@color/selector_color_txt_segment"
+                android:textSize="@dimen/text_size_mid" />
+        </com.eli.lib.segementgroup.SegmentedGroup>
+
+        <ImageButton
+            android:id="@+id/btn_control"
+            android:layout_width="@dimen/layout_title_button_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_button_title_menu" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/segmented_layout"
+        android:layout_marginBottom="@dimen/layout_nav_bar_height"
+        android:background="@color/bg_page">
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_transfer_radio_group_height"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_transfer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/downloading_list"
+                android:textColor="@color/selector_gray_to_primary"
+                android:textSize="@dimen/text_size_sm" />
+
+            <ImageView
+                android:id="@+id/line_view"
+                android:layout_width="@dimen/line_common_weight"
+                android:layout_height="fill_parent"
+                android:background="@color/line_nav_bar" />
+
+            <RadioButton
+                android:id="@+id/radio_complete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/download_record"
+                android:textColor="@color/selector_gray_to_primary"
+                android:textSize="@dimen/text_size_sm" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/line_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_common_weight"
+            android:layout_below="@+id/radiogroup"
+            android:background="@color/line_nav_bar" />
+
+        <FrameLayout
+            android:id="@+id/transfer_frame_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/line_radio" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Login Activity Dimens -->
+    <dimen name="layout_login_padding_left">80dp</dimen>
+    <dimen name="layout_login_padding_right">80dp</dimen>
+    <dimen name="layout_login_padding_top">20dp</dimen>
+    <dimen name="layout_login_button_padding_top">30dp</dimen>
+    <dimen name="layout_login_padding_bottom">20dp</dimen>
+
+    <dimen name="layout_anim_progress_width">230dp</dimen>
+
+</resources>

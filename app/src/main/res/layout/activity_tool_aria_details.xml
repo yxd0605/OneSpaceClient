@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_local"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_page"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <com.eli.oneos.widget.TitleBackLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:background="@color/primary" />
+
+    <RadioGroup
+        android:id="@+id/rg_aria_details"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/layout_title"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_files"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/aria_task_file_list"
+            android:textColor="@color/selector_gray_to_primary"
+            android:textSize="@dimen/text_size_mid" />
+
+        <ImageView
+            android:id="@+id/line_view"
+            android:layout_width="@dimen/line_common_weight"
+            android:layout_height="fill_parent"
+            android:background="@color/line_dialog" />
+
+        <RadioButton
+            android:id="@+id/rb_details"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/aria_task_details"
+            android:textColor="@color/selector_gray_to_primary"
+            android:textSize="@dimen/text_size_mid" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/line_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_common_weight"
+        android:layout_below="@+id/rg_aria_details"
+        android:background="@color/line_dialog" />
+
+    <FrameLayout
+        android:id="@+id/transfer_frame_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/line_title"
+        android:cacheColorHint="@android:color/transparent" />
+
+</RelativeLayout>

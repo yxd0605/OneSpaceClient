@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pull_to_refresh_header"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_to_refresh_progress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/pull_to_refresh_text"
+        android:visibility="gone"
+        app:mlpb_enable_circle_background="false"
+        app:mlpb_progress_color="@color/primary"
+        app:mlpb_progress_stoke_width="2dp"
+        app:mlpb_progress_text_visibility="invisible"
+        app:mlpb_show_arrow="false" />
+
+    <ImageView
+        android:id="@+id/pull_to_refresh_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dip"
+        android:layout_toLeftOf="@+id/pull_to_refresh_text"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:src="@drawable/ic_pull_arrow_down"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pull_to_refresh_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/pull_down_to_refresh_pull_label"
+        android:textColor="@color/darker_gray"
+        android:textSize="@dimen/text_size_pull_to_refresh_header" />
+
+    <TextView
+        android:id="@+id/pull_to_refresh_updated_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pull_to_refresh_text"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/text_size_min"
+        android:visibility="gone" />
+
+</RelativeLayout>

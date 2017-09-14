@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MagicDialog</string>
+
+    <string name="tips">提示</string>
+    <string name="ok">OK</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/layout_title_height"
+    android:background="@color/bg_title">
+
+    <com.eli.oneos.widget.ClearEditText
+        android:id="@+id/search_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/btn_cancel_search"
+        android:background="@drawable/bg_square_full_radius_white"
+        android:drawableLeft="@drawable/ic_search_panel_search"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/selector_edittext_clear"
+        android:focusable="true"
+        android:hint="@string/hint_search"
+        android:imeOptions="actionSearch"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/text_size_sm" />
+
+    <Button
+        android:id="@+id/btn_cancel_search"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:scaleType="centerInside"
+        android:text="@string/cancel"
+        android:textColor="@color/selector_white_to_gray"
+        android:textSize="@dimen/text_size_sm" />
+
+</RelativeLayout>

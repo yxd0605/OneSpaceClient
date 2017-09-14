@@ -1,0 +1,320 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/include_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_title_back" />
+
+        <TextView
+            android:id="@+id/txt_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/btn_back"
+            android:gravity="center"
+            android:text="@string/title_back"
+            android:textColor="@color/selector_white_to_gray"
+            android:textSize="@dimen/text_size_mid" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+
+        <com.eli.lib.segementgroup.SegmentedGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rb_dev_sda"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/device_dev_sda"
+                android:textColor="@color/selector_color_txt_segment"
+                android:textSize="@dimen/text_size_mid" />
+
+            <RadioButton
+                android:id="@+id/rb_dev_sdb"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/device_dev_sdb"
+                android:textColor="@color/selector_color_txt_segment"
+                android:textSize="@dimen/text_size_mid" />
+        </com.eli.lib.segementgroup.SegmentedGroup>
+
+        <ImageButton
+            android:id="@+id/ibtn_title_hd_info"
+            android:layout_width="@dimen/layout_title_button_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_title_about"
+            android:visibility="gone" />
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/title_loading"
+            android:layout_width="@dimen/layout_title_button_width"
+            android:layout_height="@dimen/layout_title_button_width"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            app:mlpb_enable_circle_background="false"
+            app:mlpb_progress_color="@color/white"
+            app:mlpb_progress_stoke_width="1.5dp"
+            app:mlpb_progress_text_visibility="invisible"
+            app:mlpb_show_arrow="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_introduction"
+        android:layout_below="@+id/include_title"
+        android:layout_centerHorizontal="true"
+        android:background="@color/primary"
+        android:gravity="center">
+
+        <com.eli.oneos.widget.AnimCircleProgressBar xmlns:circleProgress="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progress_space"
+            android:layout_width="@dimen/layout_anim_progress_width"
+            android:layout_height="@dimen/layout_anim_progress_width"
+            android:layout_centerInParent="true"
+            circleProgress:bg_color="0x99FFFFFF"
+            circleProgress:fill="false"
+            circleProgress:max="100"
+            circleProgress:paint_color="@color/front_anim_progress_bar"
+            circleProgress:paint_weight="13dp" />
+
+        <RelativeLayout
+            android:id="@+id/layout_tips"
+            android:layout_width="@dimen/layout_anim_progress_width"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_progress"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txt_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_anim_progress" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/txt_progress"
+                    android:gravity="bottom"
+                    android:padding="5dp"
+                    android:maxLines="1"
+                    android:text="%"
+                    android:textColor="@color/text_anim_progress"
+                    android:textSize="@dimen/text_size_mid" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_progress_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_progress"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:maxLines="1"
+                android:text="@string/user_space_info"
+                android:textColor="@color/text_anim_progress"
+                android:textSize="@dimen/text_size_mid" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.eli.oneos.widget.ReboundScrollView
+        android:id="@+id/layout_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <LinearLayout
+                android:id="@+id/layout_total"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/im_total"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@color/light_gray" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/total_space"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:id="@+id/text_total"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/querying_info"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+
+            <LinearLayout
+                android:id="@+id/layout_aviliable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/im_aviliable"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@color/primary" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/available_space"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:id="@+id/text_aviliable"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/querying_info"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+
+            <LinearLayout
+                android:id="@+id/layout_used"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/im_used"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@color/green" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/used_space"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:id="@+id/text_used"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/querying_info"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+        </LinearLayout>
+    </com.eli.oneos.widget.ReboundScrollView>
+</RelativeLayout>

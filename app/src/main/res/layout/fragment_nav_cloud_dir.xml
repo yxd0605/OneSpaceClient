@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_local"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_page">
+
+    <LinearLayout
+        android:id="@+id/layout_order_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_layout_order"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/rg_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbtn_order_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/file_order_name"
+                android:textColor="@color/selector_dark_to_primary"
+                android:textSize="@dimen/text_size_min" />
+
+            <View
+                android:layout_width="@dimen/line_common_weight"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line_nav_bar" />
+
+            <RadioButton
+                android:id="@+id/rbtn_order_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/file_order_time"
+                android:textColor="@color/selector_dark_to_primary"
+                android:textSize="@dimen/text_size_min" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="@dimen/line_common_weight"
+            android:layout_height="match_parent"
+            android:background="@color/line_nav_bar" />
+
+        <CheckBox
+            android:id="@+id/cb_switch_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_button_order"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:gravity="center"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_order_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_common_weight"
+        android:layout_below="@+id/layout_order_view"
+        android:background="@color/line_nav_bar" />
+
+    <com.eli.oneos.widget.FilePathPanel
+        android:id="@+id/layout_path_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_path_height"
+        android:layout_below="@+id/view_order_line" />
+
+    <include
+        android:id="@+id/include_file_list"
+        layout="@layout/layout_file_directory_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_path_panel" />
+
+</RelativeLayout>

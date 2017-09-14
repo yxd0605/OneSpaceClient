@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_square_full_radius_white">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/tip_chmod_file"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layout_chmod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_title"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/chmod_file_group"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_sm" />
+
+            <CheckBox
+                android:id="@+id/cb_group_read"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/selector_check_box_file_list"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/permission_read"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_sm" />
+
+            <CheckBox
+                android:id="@+id/cb_group_write"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/selector_check_box_file_list"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/permission_write"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_sm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/chmod_file_other"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_sm" />
+
+            <CheckBox
+                android:id="@+id/cb_other_read"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/selector_check_box_file_list"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/permission_read"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_sm" />
+
+            <CheckBox
+                android:id="@+id/cb_other_write"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/selector_check_box_file_list"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/permission_write"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_sm" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_dialog_weight"
+        android:layout_below="@+id/layout_chmod"
+        android:layout_marginTop="5dp"
+        android:background="@color/line_dialog" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_dialog_bottom_height"
+        android:layout_below="@+id/iv_line"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/negative"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_square_left_bottom_radius_white_trans_gray"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_mid"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/line_btn"
+            android:layout_width="@dimen/line_dialog_weight"
+            android:layout_height="fill_parent"
+            android:background="@color/line_dialog" />
+
+        <Button
+            android:id="@+id/positive"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_square_right_bottom_radius_white_trans_gray"
+            android:gravity="center"
+            android:text="@string/modify"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_mid" />
+    </LinearLayout>
+
+</RelativeLayout>

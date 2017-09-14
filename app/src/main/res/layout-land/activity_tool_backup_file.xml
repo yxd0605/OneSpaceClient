@@ -1,0 +1,201 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_page"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.eli.oneos.widget.TitleBackLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:background="@color/bg_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.0"
+            android:gravity="center">
+
+            <com.eli.oneos.widget.AnimCircleProgressBar xmlns:circleProgress="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/progressbar"
+                android:layout_width="@dimen/layout_anim_progress_width"
+                android:layout_height="@dimen/layout_anim_progress_width"
+                android:layout_centerInParent="true"
+                circleProgress:bg_color="@color/light_gray"
+                circleProgress:fill="false"
+                circleProgress:max="100"
+                circleProgress:paint_color="@color/front_anim_progress_bar"
+                circleProgress:paint_weight="13dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_progress_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:maxLines="1"
+                    android:text="@string/remain"
+                    android:textColor="@color/text_anim_progress"
+                    android:textSize="@dimen/text_size_min" />
+
+                <TextView
+                    android:id="@+id/txt_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_anim_progress" />
+
+                <TextView
+                    android:id="@+id/txt_progress_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:maxLines="1"
+                    android:text="@string/counts"
+                    android:textColor="@color/text_anim_progress"
+                    android:textSize="@dimen/text_size_min" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_complete_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/backup_complete"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_max" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="2.0"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_pic_viewer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:addStatesFromChildren="true"
+                android:gravity="center_horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/auto_backup_file"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <com.eli.oneos.widget.SwitchButton
+                    android:id="@+id/btn_auto_backup"
+                    android:layout_width="45dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="0dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:addStatesFromChildren="true"
+                android:gravity="center_horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/auto_backup_only_wifi"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <com.eli.oneos.widget.SwitchButton
+                    android:id="@+id/btn_wifi_backup"
+                    android:layout_width="45dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="0dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+
+            <TextView
+                android:id="@+id/btn_backup_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_list_trans_to_gray"
+                android:drawableRight="@drawable/ic_arrow_right_small"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:maxLines="1"
+                android:text="@string/backup_file_list"
+                android:textColor="@color/darker"
+                android:textSize="@dimen/text_size_mid" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_settings_weight"
+                android:layout_margin="10dp"
+                android:background="@color/line_settings" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

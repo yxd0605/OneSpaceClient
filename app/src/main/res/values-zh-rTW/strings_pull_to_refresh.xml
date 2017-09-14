@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pull_down_to_refresh_pull_label">下拉刷新列表</string>
+    <string name="pull_down_to_refresh_release_label">松開立即刷新</string>
+    <string name="pull_down_to_refresh_refreshing_label">正在更新&#8230;</string>
+    <string name="pull_down_to_refresh_last_update_head_label">上次更新: </string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_up_to_refresh_pull_label">上拉加載更多</string>
+    <string name="pull_up_to_refresh_release_label">松開立即加載</string>
+    <string name="pull_up_to_refresh_refreshing_label">正在加載&#8230;</string>
+    <string name="pull_up_to_refresh_last_update_head_label">上次加載: </string>
+
+</resources>

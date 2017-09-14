@@ -1,0 +1,363 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <com.eli.oneos.widget.TitleBackLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:background="@color/bg_title" />
+
+    <com.eli.oneos.widget.ReboundScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_set"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_transfer_radio_group_height"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:background="@color/line_settings" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_settings_user"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/current_user"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/darker"
+                            android:textSize="@dimen/text_size_mid" />
+
+                        <TextView
+                            android:id="@+id/txt_ip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="192.168.1.115"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/text_size_min"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/line_settings" />
+
+                <Button
+                    android:id="@+id/clean"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:drawableLeft="@drawable/ic_settings_clean"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/btn_arrow_right"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/clean_record"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/line_settings" />
+
+                <Button
+                    android:id="@+id/savepath"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:drawableLeft="@drawable/ic_settings_path"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/btn_arrow_right"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/set_default_path"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:background="@color/line_settings" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:background="@color/line_settings" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:gravity="center_horizontal"
+                    android:padding="7dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_settings_network"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/only_wifi_preview_pic"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+
+                    <com.eli.oneos.widget.SwitchButton
+                        android:id="@+id/switch_preview"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="15dp"
+                        android:enabled="false" />
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/line_settings" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:gravity="center_horizontal"
+                    android:padding="7dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_settings_tip"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/not_wifi_download_tips"
+                        android:textColor="@color/darker"
+                        android:textSize="@dimen/text_size_mid" />
+
+                    <com.eli.oneos.widget.SwitchButton
+                        android:id="@+id/switch_download"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="15dp"
+                        android:enabled="false" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:background="@color/line_settings" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_space"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:background="@color/line_settings" />
+
+                <Button
+                    android:id="@+id/server_space"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:drawableLeft="@drawable/ic_settings_server"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/btn_arrow_right"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/space_total"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/line_settings" />
+
+                <Button
+                    android:id="@+id/user_space"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:drawableLeft="@drawable/ic_settings_person"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/btn_arrow_right"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/space_user"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/line_settings" />
+
+                <Button
+                    android:id="@+id/local_space"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:drawableLeft="@drawable/ic_settings_local"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/btn_arrow_right"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/space_local"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:background="@color/line_settings" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_about"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_transfer_radio_group_height"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:background="@color/line_settings" />
+
+                <Button
+                    android:id="@+id/forum"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:drawableLeft="@drawable/ic_settings_forum"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/btn_arrow_right"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/title_onespace_forum"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/line_settings" />
+
+                <Button
+                    android:id="@+id/about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/selector_list_trans_to_gray"
+                    android:drawableLeft="@drawable/ic_settings_about"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/btn_arrow_right"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/about_onespace"
+                    android:textColor="@color/darker"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_settings_weight"
+                    android:background="@color/line_settings" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.eli.oneos.widget.ReboundScrollView>
+
+</RelativeLayout>

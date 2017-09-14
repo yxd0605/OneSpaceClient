@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/qrcode_bitmap"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true" />
+
+
+
+        <com.eli.oneos.widget.TitleBackLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_tool_title_height"
+            android:background="@color/bg_title"
+            />
+        <TextView
+            android:id="@+id/qr_share"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/share_file"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_mid"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

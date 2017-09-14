@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text Size -->
+    <dimen name="text_size_title">17sp</dimen>
+    <dimen name="text_size_max">18sp</dimen>
+    <dimen name="text_size_big">16sp</dimen>
+    <dimen name="text_size_mid">15sp</dimen>
+    <dimen name="text_size_sm">14sp</dimen>
+    <dimen name="text_size_min">12sp</dimen>
+
+    <dimen name="text_size_nav_bar">11sp</dimen>
+    <dimen name="text_size_anim_progress">48sp</dimen>
+
+</resources>

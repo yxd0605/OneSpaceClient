@@ -1,0 +1,69 @@
+<resources>
+
+    <declare-styleable name="SwipeListView">
+        <attr name="Right_Width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleStateProgressStyle">
+
+        <!-- 圆形底色 -->
+        <attr name="baseColor" format="reference|color" />
+        <!-- 圆形进度颜色 -->
+        <attr name="primaryColor" format="reference|color" />
+        <!-- 圆形二级进度颜色 -->
+        <attr name="secondaryColor" format="reference|color" />
+        <!-- 圆形进度起点 -->
+        <attr name="primaryStartAngle" format="reference|integer" />
+        <!-- 圆形二级进度起点 -->
+        <attr name="secondaryStartAngle" format="reference|integer" />
+
+        <!-- 宽度 -->
+        <attr name="bordWidth" format="reference|dimension" />
+        <!-- 字体颜色 -->
+        <attr name="textColor" format="reference|color" />
+        <!-- 字体大小 -->
+        <attr name="textSize" format="reference|dimension" />
+        <!-- 文本内容 -->
+        <attr name="text" format="reference" />
+        <!-- 是否显示文本 -->
+        <attr name="textShow" format="reference|boolean" />
+
+        <!-- 是否显示进度状态 -->
+        <attr name="stateShow" format="boolean" />
+
+        <!-- 最大进度值 -->
+        <attr name="MaxProgress" format="reference|integer" />
+        <!-- 进度样式 -->
+        <attr name="profressStyle">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AnimCircleProgressBar">
+
+        <!-- 进度条最大值 -->
+        <attr name="max" format="integer" />
+        <!-- 是否填充圆形区域 -->
+        <attr name="fill" format="boolean" />
+        <!-- 画笔宽度，填充模式下无效，会被重置为0 -->
+        <attr name="paint_width" format="integer" />
+        <attr name="paint_weight" format="reference|dimension" />
+        <!-- 前景色 画笔颜色 -->
+        <attr name="paint_color" format="integer" />
+        <!-- 背景色 画笔颜色 -->
+        <attr name="bg_color" format="integer" />
+        <!-- 圆形区域向里缩进的距离 -->
+        <attr name="inside_interval" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageCheckBox">
+
+        <!-- 是否选中 -->
+        <attr name="checked" format="boolean" />
+        <!-- checked background resource id -->
+        <attr name="checkedResId" format="integer" />
+        <!-- unchecked background resource id -->
+        <attr name="uncheckedResId" format="integer" />
+    </declare-styleable>
+</resources>

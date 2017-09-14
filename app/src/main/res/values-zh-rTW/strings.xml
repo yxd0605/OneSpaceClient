@@ -1,0 +1,539 @@
+<resources>
+    <string name="app_name">OneSpace</string>
+    <string name="upload_to_onespace">上傳到OneSpace</string>
+
+    <!-- Common String-->
+    <string name="title_back">返回</string>
+    <string name="ok">OK</string>
+    <string name="confirm">確定</string>
+    <string name="cancel">取消</string>
+    <string name="tips">提示</string>
+    <string name="warning">警告</string>
+    <string name="paste">粘貼</string>
+    <string name="modify">修改</string>
+    <string name="modifying">正在修改&#8230;</string>
+    <string name="modify_succeed">修改成功</string>
+    <string name="modify_failed">修改失敗</string>
+    <string name="delete">刪除</string>
+    <string name="open">打開</string>
+    <string name="dialog_continue">繼續</string>
+    <string name="permission_denied">權限拒絕</string>
+    <string name="connection_refused">無法連接到您的設備，請檢查設備和網絡狀態！</string>
+    <string name="network_not_available">當前網絡不可用，請檢查網絡狀態！</string>
+    <string name="oneos_version_mismatch">您的OneSpace系統版本過低，請升級到 OneOS v3.x 版本！</string>
+    <string name="fmt_oneos_version_upgrade" formatte="false">您的OneSpace系統版本過低，請升級到 OneOS v%s 以上版本！</string>
+    <string name="oneos_version_check_failed">檢測系統版本失敗，請重新嘗試！</string>
+    <string name="tips_title_version_mismatch">系統版本不匹配</string>
+    <string name="wifi_not_available">當前WiFi不可用，請檢查WiFi狀態！</string>
+    <string name="goto_settings">設置</string>
+    <string name="error_json_exception">協議解析失敗</string>
+    <string name="operate_failed">操作失敗</string>
+    <string name="app_exception">程序異常</string>
+    <string name="please_login_onespace">請先登錄OneSpace</string>
+    <string name="please_login_onespace_with_admin">請使用管理員用戶登錄OneSpace</string>
+    <string name="confirm_download_not_wifi">當前非Wi-Fi網絡環境，繼續下載將產生數據流量!</string>
+    <string name="confirm_upload_not_wifi">當前非Wi-Fi網絡環境，繼續上傳將產生數據流量!</string>
+    <string name="app_exception_to_exit">異常，正在收集信息，3s後退出...</string>
+    <string name="press_again_to_exit">再按壹次退出程序</string>
+    <string name="tips_exit_if_has_task">您有尚未完成的上傳/下載任務，繼續退出將會中斷所有任務！</string>
+    <string name="exit">退出</string>
+    <string name="loading">正在加載&#8230;</string>
+    <string name="all_loaded">已加載全部</string>
+    <string name="failed_get_upload_file">獲取上傳文件路徑失敗</string>
+    <string name="perm_denied_storage">為保證App正常使用，請設置允許讀、寫手機存儲</string>
+
+    <!-- File Operation -->
+    <string name="file_type_private">我的文件</string>
+    <string name="file_type_public">公共目錄</string>
+    <string name="file_type_doc">文檔</string>
+    <string name="file_type_pic">圖片</string>
+    <string name="file_type_audio">音樂</string>
+    <string name="file_type_video">視頻</string>
+    <string name="file_type_cycle">回收站</string>
+    <string name="file_type_download">下載</string>
+    <string name="file_type_app">安裝包</string>
+
+    <string name="details_file">詳情</string>
+    <string name="open_file">打開</string>
+    <string name="copy_file">復制</string>
+    <string name="move_file">移動</string>
+    <string name="delete_file">刪除</string>
+    <string name="rename_file">重命名</string>
+    <string name="download_file">下載</string>
+    <string name="upload_file">上傳</string>
+    <string name="encrypt_file">加密</string>
+    <string name="decrypt_file">解密</string>
+    <string name="chmod_file">權限</string>
+    <string name="attr_file">詳情</string>
+    <string name="share_file">分享</string>
+    <string name="clean_recycle_file">清空回收站</string>
+    <string name="tip_select_file">請先選擇需要操作的文件</string>
+    <string name="tip_attr_file">屬性</string>
+    <string name="getting_file_attr">正在獲取&#8230;</string>
+    <string name="file_attr_path">位置：</string>
+    <string name="file_attr_size">大小：</string>
+    <string name="file_attr_files">文件：</string>
+    <string name="file_attr_folders">文件夾：</string>
+    <string name="tail_file_attr_size_bytes">字節</string>
+    <string name="tail_file_attr_folders">個文件夾</string>
+    <string name="tail_file_attr_files">個文件</string>
+    <string name="file_attr_permission">權限：</string>
+    <string name="file_attr_uid">UID：</string>
+    <string name="file_attr_gid">GID：</string>
+    <string name="file_attr_read">可讀：</string>
+    <string name="file_attr_write">可寫：</string>
+    <string name="file_attr_time">時間：</string>
+    <string name="tip_chmod_file">文件權限</string>
+    <string name="chmod_file_group">同組用戶：</string>
+    <string name="chmod_file_other">其他用戶：</string>
+    <string name="permission_read">可讀</string>
+    <string name="permission_write">可寫</string>
+    <string name="tip_delete_file">確定刪除所選文件？</string>
+    <string name="deleting_file">正在刪除&#8230;</string>
+    <string name="delete_file_success">刪除成功</string>
+    <string name="delete_file_failed">刪除失敗</string>
+    <string name="renaming_file">正在重命名&#8230;</string>
+    <string name="tip_rename_file">重命名文件</string>
+    <string name="hint_rename_file">請輸入新的文件名</string>
+    <string name="rename_file_success">重命名成功</string>
+    <string name="rename_file_failed">重命名失敗</string>
+    <string name="making_folder">正在新建&#8230;</string>
+    <string name="tip_new_folder">新建文件夾</string>
+    <string name="hint_new_folder">請輸入文件夾名</string>
+    <string name="default_new_folder">新建文件夾</string>
+    <string name="new_folder_success">新建文件夾成功</string>
+    <string name="new_folder_failed">新建文件夾失敗</string>
+    <string name="encrypting_file">正在加密&#8230;</string>
+    <string name="tip_encrypt_file">文件加密</string>
+    <string name="warning_encrypt_file">警告：請牢記加密密碼，否則將無法解密文件！</string>
+    <string name="hint_encrypt_pwd">請輸入加密密碼</string>
+    <string name="hint_confirm_encrypt_pwd">請確認加密密碼</string>
+    <string name="error_confirm_pwd">兩次輸入密碼不壹致</string>
+    <string name="encrypt_file_success">文件加密成功</string>
+    <string name="encrypt_file_failed">文件加密失敗</string>
+    <string name="decrypting_file">正在解密&#8230;</string>
+    <string name="tip_decrypt_file">文件解密</string>
+    <string name="hint_decrypt_pwd">請輸入解密密碼</string>
+    <string name="decrypt_file_success">文件解密成功</string>
+    <string name="decrypt_file_failed">文件解密失敗</string>
+    <string name="tip_move_file">移動到&#8230;</string>
+    <string name="moving_file">正在移動&#8230;</string>
+    <string name="chmod_ing_file">正在修改&#8230;</string>
+    <string name="tip_upload_file">上傳到&#8230;</string>
+    <string name="move_file_success">文件移動成功</string>
+    <string name="move_file_failed">文件移動失敗</string>
+    <string name="tip_copy_file">復制到&#8230;</string>
+    <string name="copying_file">正在復制&#8230;</string>
+    <string name="copy_file_success">文件復制成功</string>
+    <string name="copy_file_failed">文件復制失敗</string>
+    <string name="title_clean_recycle_file">清空回收站</string>
+    <string name="tip_clean_recycle_file">清空後，回收站所有文件將被永久刪除。</string>
+    <string name="cleaning_recycle">正在清空&#8230;</string>
+    <string name="chmod_file_success">修改權限成功</string>
+    <string name="clean_recycle_success">清空回收站成功</string>
+    <string name="clean_recycle_failed">清空回收站失敗</string>
+    <string name="share_file_success">分享成功</string>
+    <string name="clean_now">清空</string>
+
+    <!-- Navigation Bar Title -->
+    <string name="nav_title_local">本地</string>
+    <string name="nav_title_cloud">雲盤</string>
+    <string name="nav_title_transfer">傳輸</string>
+    <string name="nav_title_tool">工具包</string>
+
+    <!-- Login Activity -->
+    <string name="title_login">OneSpace登錄</string>
+    <string name="login">登錄</string>
+    <string name="title_enter_user">用戶名</string>
+    <string name="title_enter_pwd">密&#160;&#160;&#160;&#160;碼</string>
+    <string name="title_select_ip">IP地址</string>
+    <string name="title_enter_port">端口號</string>
+    <string name="hint_enter_user">請輸入用戶名</string>
+    <string name="hint_enter_pwd">請輸入密碼</string>
+    <string name="hint_select_ip">請輸入IP地址</string>
+    <string name="hint_enter_port">請輸入端口號</string>
+    <string name="tip_invalid_port">請輸入有效端口號</string>
+    <string name="logining">正在登錄&#8230;</string>
+    <string name="scanning_device">搜索OneSpace&#8230;</string>
+    <string name="tip_title_research">搜索設備</string>
+    <string name="tip_search_again">未搜索到可用OneSpace，重新搜索？</string>
+    <string name="research_now">重新搜索</string>
+    <string name="getting_device_mac">獲取Mac&#8230;</string>
+    <string name="error_get_device_mac">獲取Mac地址失敗，請嘗試重新登錄</string>
+    <string name="error_login_user_or_pwd">用戶名或密碼錯誤</string>
+
+    <!-- for SSUDP -->
+    <string name="remote_login">遠程訪問</string>
+    <string name="tip_title_bond_ssudp">綁定SSUDP？</string>
+    <string name="tip_bond_ssudp">綁定後，可以選擇使用SSUDP訪問設備！</string>
+    <string name="binding">正在綁定&#8230;</string>
+    <string name="ssudp_connecting">正在連接設備&#8230;</string>
+    <string name="bind_now">立即綁定</string>
+    <string name="bind_succeed">綁定成功</string>
+    <string name="bind_failed">綁定失敗</string>
+    <string name="tip_title_bond_ssudp_failed">綁定SSUDP失敗</string>
+    <string name="tip_title_connect_ssudp_failed">連接設備失敗</string>
+    <string name="tip_bond_ssudp_failed">您的OneSpace暫不支持SSUDP服務，請聯系官方技術支持！</string>
+    <string name="tip_ssudp_open_file_failed">SSUDP登錄不支持在線打開文件，請下載後查看！</string>
+    <string name="tip_title_ssudp_disconnect">SSUDP連接已斷開</string>
+    <string name="tip_title_ssudp_connect">SSUDP恢復連接</string>
+
+    <!-- Cloud Fragment -->
+    <string name="root_dir_name_private">我的目錄</string>
+    <string name="root_dir_name_public">公共目錄</string>
+    <string name="root_dir_name_recycle">回收站</string>
+    <string name="root_dir_name_sdcard">內存目錄</string>
+    <string name="root_dir_name_download">下載目錄</string>
+    <string name="root_dir_all">全部</string>
+    <string name="action_upload_file">上&#160;傳&#160;文&#160;件</string>
+    <string name="action_new_folder">新建文件夾</string>
+    <string name="file_order_time">按時間排序</string>
+    <string name="file_order_name">按文件名排序</string>
+    <string name="file_viewer_list">文件列表顯示</string>
+    <string name="file_viewer_grid">文件網格顯示</string>
+
+    <string name="hint_search">請輸入要搜索的文件名</string>
+    <string name="hint_select_file">請選擇文件</string>
+    <string name="select_all">全選</string>
+    <string name="select_none">全不選</string>
+    <string name="selected_item">已選擇%s項</string>
+    <string name="empty_file_list">該目錄沒有文件</string>
+    <string name="error_access_dir_perm_deny">沒有權限訪問此目錄</string>
+    <string name="error_manage_perm_deny">沒有權限</string>
+    <string name="error_get_file_list">獲取文件列表失敗</string>
+    <string name="fmt_time_line">yyyy年MM月</string>
+    <string name="error_open_encrypt_file">很抱歉，無法查看加密文件</string>
+    <string name="error_open_encrypt_pic">很抱歉，無法查看加密圖片</string>
+    <string name="error_app_not_found_to_open_file">未找到打開此文件的應用程序</string>
+    <string name="gap_symbol">/</string>
+    <string name="tip_start_download">開始下載: </string>
+    <string name="tip_start_upload">開始上傳: </string>
+
+    <!-- Transfer Fragment -->
+    <string name="download_list">下&#160;載</string>
+    <string name="upload_list">上&#160;傳</string>
+    <string name="download_record">下載記錄</string>
+    <string name="downloading_list">正在下載</string>
+    <string name="upload_record">上傳記錄</string>
+    <string name="uploading_list">正在上傳</string>
+    <string name="start_all">全部開始</string>
+    <string name="pause_all">全部暫停</string>
+    <string name="delete_all">全部刪除</string>
+    <string name="empty_transfer_list">沒有傳輸記錄</string>
+    <string name="cancel_and_delete_local">同時刪除本地文件</string>
+    <string name="confirm_cancel_download">確認取消當前下載?</string>
+    <string name="confirm_cancel_upload">確認取消當前上傳?</string>
+    <string name="cancel_download">下載已取消</string>
+    <string name="cancel_upload">上傳已取消</string>
+    <string name="waiting">正在等待&#8230;</string>
+    <string name="download_pause">暫停下載</string>
+    <string name="download_failed">下載失敗</string>
+    <string name="upload_pause">暫停上傳</string>
+    <string name="refuse_upload_folder">暫不支持上傳文件夾</string>
+
+    <!-- Download of upload failed information -->
+    <string name="local_space_insufficient">本地空間不足</string>
+    <string name="server_space_insufficient">空間不足</string>
+    <string name="request_server_exception">請求失敗</string>
+    <string name="decoding_exception">解碼異常</string>
+    <string name="io_exception">讀寫異常</string>
+    <string name="file_not_found">文件不存在</string>
+    <string name="touch_file_failed">創建文件失敗</string>
+    <string name="socket_timeout">連接超時</string>
+    <string name="unknown_exception">未知錯誤</string>
+    <string name="wifi_connect_break">網絡中斷</string>
+
+    <!-- Tools Fragment -->
+    <string name="tool_setting">設置</string>
+    <string name="tool_backup_photo">相冊備份</string>
+    <string name="tool_backup_file">文件備份</string>
+    <string name="tool_sync_contact">通訊錄備份</string>
+    <string name="tool_sync_sms">短信備份</string>
+    <string name="tool_app">應用管理</string>
+    <string name="tool_aria">Aria下載</string>
+    <string name="tool_system_management">系統管理</string>
+    <string name="tool_user_management">用戶管理</string>
+    <string name="tool_hd_info">硬盤信息</string>
+    <string name="tool_system_status">系統狀態</string>
+    <string name="tool_logout">退出登錄</string>
+
+    <string name="device_power_off">安全關機</string>
+    <string name="cancel_opt_power">取&#160;&#160;消</string>
+    <string name="device_reboot">重新啟動</string>
+    <string name="confirm_reboot_device">確定重新啟動OneSpace?</string>
+    <string name="confirm_power_off_device">確定關閉OneSpace?</string>
+    <string name="power_off_device">正在關閉OneSpace&#8230;</string>
+    <string name="rebooting_device">正在重啟OneSpace&#8230;</string>
+    <string name="success_power_off_device">OneSpace關閉成功</string>
+    <string name="success_reboot_device">OneSpace重啟成功</string>
+    <string name="failed_power_off_device">OneSpace關閉失敗</string>
+    <string name="failed_reboot_device">OneSpace重啟失敗</string>
+    <string name="confirm_logout">確認退出登錄?</string>
+    <string name="warning_logout">該操作將關閉相冊自動同步功能並取消所有正在上傳/下載的任務!</string>
+
+    <!-- Settings Activity -->
+    <string name="title_settings">設置</string>
+    <string name="settings">設置</string>
+    <string name="not_login">尚未登錄</string>
+    <string name="current_user">當前用戶</string>
+    <string name="current_path">當前存儲目錄：</string>
+    <string name="clean_record">清除所有上傳下載記錄</string>
+    <string name="clean_record_success">清除成功</string>
+    <string name="clean_record_failed">清除失敗</string>
+    <string name="setting_success">設置成功</string>
+    <string name="setting_failed">設置失敗</string>
+    <string name="confirm_clear_record">確認清除記錄?</string>
+    <string name="set_default_path">設置下載默認存儲路徑</string>
+    <string name="only_wifi_preview_pic">僅在Wi-Fi環境預覽圖片</string>
+    <string name="not_wifi_download_tips">非Wi-Fi環境上傳/下載文件提醒</string>
+    <string name="about_onespace">關於OneSpace</string>
+    <string name="title_onespace_forum">OneSpace 論壇</string>
+    <string name="title_onespace_website">OneSpace 官網</string>
+    <string name="space_total">OneSpace總空間</string>
+    <string name="space_user">當前用戶空間</string>
+    <string name="space_local">SD卡空間</string>
+    <string name="sd_state_unmounted">沒有可用的SD卡</string>
+
+    <!-- App Upgrade -->
+    <string name="get_version_exception">版本獲取失敗</string>
+    <string name="get_version_from_server_exception">獲取新版本信息失敗</string>
+    <string name="is_latest_version">當前已是最新版本</string>
+    <string name="have_new_version_app">新版本:&#160;V&#160;</string>
+    <string name="oneos_minimum_version">註意：要求OneOS最低版本&#160;v</string>
+    <string name="confirm_cancel_download_app">確定取消下載新版本?</string>
+    <string name="interrupt_download">取消下載</string>
+    <string name="continue_download">繼續下載</string>
+    <string name="check_app_version">APP版本檢測&#8230;</string>
+    <string name="tips_upgrade_oneos_version_low" formatted="false">當前設備的OneOS系統版本為v%s，低於App要求的最低版本v%s，建議您先升級OneOS到最新版本後再升級App，否則App將無法正常使用！</string>
+    <string name="upgrade_later">稍後更新</string>
+    <string name="upgrade_app_now">立即升級</string>
+    <string name="upgrade_next_time">下次再說</string>
+    <string name="ignore_this_version">忽略此版本</string>
+    <string name="download_new_app">正在下載新版APP</string>
+    <string name="download_app_failed">下載失敗，請重新嘗試</string>
+    <string name="tip_oneos_new_version_upgrade">您的設備有新的OneOS系統可以升級，請前往http://onespace.cc/download/oneos/查看更新！</string>
+
+    <!-- Space Activity -->
+    <string name="user_space_info">您的空間已使用</string>
+    <string name="title_local">SD卡空間</string>
+    <string name="title_server">OneSpace總空間</string>
+    <string name="title_user">當前用戶空間</string>
+    <string name="total_space">總&#160;&#160;空&#160;&#160;間:</string>
+    <string name="available_space">可用空間:</string>
+    <string name="used_space">已用空間:</string>
+    <string name="query_space_failure">查詢失敗</string>
+    <string name="device_dev_sda">盤A</string>
+    <string name="device_dev_sdb">盤B</string>
+
+    <!-- About Activity -->
+    <string name="title_about">關於OneSpace</string>
+    <string name="copyright_statement">Powered by OneSpace</string>
+    <string name="website_onespace">www.onespace.cc</string>
+    <string name="start_download_file">開始下載文件&#8230;</string>
+
+    <!-- Apps Activity -->
+    <string name="title_apps_phone">手機</string>
+    <string name="getting_app_list">獲取應用列表&#8230;</string>
+    <string name="error_open_app">很抱歉，無法打開此應用</string>
+    <string name="error_get_app_details">未查詢到該應用信息</string>
+    <string name="can_not_uninstall">無法卸載</string>
+    <string name="app_not_found_exception">未查詢到該應用信息</string>
+    <string name="confirm_uninstall_plugin">確認卸載&#160;&#160;</string>
+    <string name="uninstall">卸載</string>
+    <string name="uninstalling_plugin">正在卸載&#8230;</string>
+    <string name="opening_plugin">正在打開&#8230;</string>
+    <string name="closing_plugin">正在關閉&#8230;</string>
+    <string name="confirm_open_plugin">確認打開&#160;&#160;</string>
+    <string name="confirm_close_plugin">確認關閉&#160;&#160;</string>
+    <string name="app_status">狀態：&#160;</string>
+    <string name="app_state_getting">正在獲取&#8230;</string>
+    <string name="app_state_on">運行中</string>
+    <string name="app_state_off">未運行</string>
+    <string name="app_state_unknown">未知</string>
+
+    <!-- Aria Download Activity -->
+    <string name="enter_url_hint">HTTP、FTP 或 Magnet</string>
+    <string name="select_torrent">選擇Torrent</string>
+    <string name="add_aria_download">添加Aria下載任務</string>
+    <string name="download_to_onespace">下載到OneSpace</string>
+    <string name="select_torrent_file">請選擇種子文件</string>
+    <string name="dir_without_torrent">該目錄無種子文件</string>
+    <string name="aria_download_tips">請填寫需要下載的文件鏈接或上傳種子文件</string>
+    <string name="aria_download_path_tips">離線下載文件將保存在OneSpace公共目錄Download中</string>
+    <string name="confirm_del_active_aria">確定刪除該離線下載任務？</string>
+    <string name="confirm_del_stopped_aria">確定刪除該離線下載記錄？</string>
+    <string name="aria_task_file_list">文件列表</string>
+    <string name="aria_task_details">任務詳情</string>
+    <string name="title_aria">Aria下載</string>
+    <string name="title_aria_task_details">Aria任務詳情</string>
+    <string name="save_settings">保存設置</string>
+    <string name="aria_global_settings">離線下載設置</string>
+    <string name="aria_upload_speed_limit">上傳速度限制:</string>
+    <string name="aria_download_speed_limit">下載速度限制:</string>
+    <string name="aria_download_max_concurrent">並發數:</string>
+    <string name="aria_download_piece_length">最小分片大小:</string>
+    <string name="aria_download_dir">下載目錄:</string>
+    <string name="aria_download_size">大小:</string>
+    <string name="aria_download_speed">下載速度:</string>
+    <string name="aria_download_time">剩余時間:</string>
+    <string name="aria_download_connections">連接數:</string>
+    <string name="aria_download_peers">分片數:</string>
+    <string name="aria_download_peer_len">分片大小:</string>
+    <string name="please_enter_limit">請先填寫限制速度大小</string>
+    <string name="success_save_aria_setting">設置成功</string>
+    <string name="request_aria_settings">獲取Aria配置&#8230;</string>
+    <string name="request_set_aria_settings">配置Aria&#8230;</string>
+    <string name="error_request_aria_params">獲取Aria配置失敗</string>
+    <string name="error_set_aria_params">配置Aria失敗</string>
+    <string name="fmt_add_aria_task_success">添加 %s 離線下載成功！</string>
+    <string name="fmt_add_aria_task_failed">添加 %s 添加離線下載失敗！</string>
+    <string name="tips_no_sd_card">未檢測到您的SD卡，請確認SD卡正常掛載！</string>
+    <string name="connect_aria_exception">Aria已離線，請確認是否打開Aria離線下載</string>
+
+    <!--Backup Photo Activity -->
+    <string name="title_backup_photo">相冊備份</string>
+    <string name="unknown_photo_date">未知時間</string>
+    <string name="remain">剩余</string>
+    <string name="counts">個</string>
+    <string name="backup_dir_shown">保存目錄：&#160;</string>
+    <string name="backup_complete">備份完成</string>
+    <string name="backup_closed">備份關閉</string>
+    <string name="auto_backup_photo">自動備份相冊</string>
+    <string name="title_reset_backup">重置相冊備份</string>
+    <string name="tips_reset_backup">重置後，將重新檢測備份相冊中所有圖片和視頻</string>
+    <string name="success_reset_backup">重置成功!</string>
+    <string name="reset_now">立即重置</string>
+    <string name="auto_backup_only_wifi">僅在Wi-Fi環境下備份</string>
+
+    <!-- Backup File Activity -->
+    <string name="title_backup_file">文件備份</string>
+    <string name="auto_backup_file">自動備份文件</string>
+    <string name="backup_file_list">自動備份的目錄</string>
+    <string name="fmt_backup_folder_count">&#160;(%d個文件夾)</string>
+    <string name="tips_empty_backup_file">沒有需要備份的文件夾</string>
+    <string name="title_backup_file_list">自動備份的文件夾</string>
+    <string name="title_add_backup_file">添加自動備份文件夾</string>
+    <string name="confirm_add_backup_file">確認備份該文件夾</string>
+    <string name="confirm_backup">確認添加備份</string>
+    <string name="continue_add_backup">繼續添加</string>
+    <string name="error_fmt_add_backup_dir_count">最多可以添加%d個備份文件夾</string>
+    <string name="tips_add_backup_dir_repeat">繼續添加該目錄可能會導致文件重復備份</string>
+    <string name="tips_add_backup_album_repeat">如果已經打開自動備份照片，繼續添加該目錄可能會導致文件重復備份</string>
+    <string name="error_backup_dir_exist">該目錄已添加備份</string>
+    <string name="error_backup_without_read_permission">沒有讀權限，無法備份此目錄</string>
+    <string name="delete_backup_file">刪除備份目錄</string>
+    <string name="tips_confirm_delete_backup_dir">確認刪除此備份目錄？</string>
+    <string name="tips_confirm_add_backup_dir">確認自動備份此目錄？</string>
+    <string name="is_backup">正在備份：</string>
+    <string name="add_backup_file">添加自動備份</string>
+    <string name="cancel_backup_file">取消自動備份</string>
+    <string name="tips_open_backup_file">確認開啟自動備份此目錄？</string>
+    <string name="tips_close_backup_file">確認關閉此目錄自動備份？</string>
+
+    <!--Backup Contacts and SMS-->
+    <string name="title_sync_contacts">通訊錄備份</string>
+    <string name="last_sync_time">上次備份時間：</string>
+    <string name="sync_contacts_to_server">備份通訊錄到設備</string>
+    <string name="recover_contacts_to_phone">恢復通訊錄到手機</string>
+    <string name="title_sync_sms">短信備份</string>
+    <string name="sync_sms_to_server">備份短信到設備</string>
+    <string name="recover_sms_to_phone">恢復短信到手機</string>
+    <string name="recovering">正在恢復&#8230;</string>
+    <string name="recover_waiting">等待恢復&#8230;</string>
+    <string name="recover_prepare">準備恢復&#8230;</string>
+    <string name="recover_success">恢復完成</string>
+    <string name="recover_failed">恢復失敗</string>
+    <string name="error_export_sms">備份短信出錯</string>
+    <string name="error_export_contacts">備份通訊錄出錯</string>
+    <string name="error_import_sms">恢復短信出錯</string>
+    <string name="error_import_contacts">恢復通訊錄出錯</string>
+    <string name="no_sms_to_recover">未檢測到可恢復的短信</string>
+    <string name="no_contact_to_recover">未檢測到可恢復的聯系人</string>
+    <string name="syncing">正在備份&#8230;</string>
+    <string name="exporting">正在導出&#8230;</string>
+    <string name="sync_waiting">等待備份&#8230;</string>
+    <string name="not_sync">尚未備份</string>
+    <string name="sync_failed">備份失敗</string>
+    <string name="sync_success">備份完成</string>
+    <string name="wait_to_sync">等待操作</string>
+    <string name="no_sms_to_sync">未檢測到可備份的短信</string>
+    <string name="no_contact_to_sync">未檢測到可備份的聯系人</string>
+    <string name="sync_exception_download">備份失敗，請重新嘗試</string>
+    <string name="recovery_exception_upload">恢復失敗，請重新嘗試</string>
+    <string name="permission_denied_backup_contact">備份通訊錄需要讀取、修改通訊錄權限，請先前往設置頁面打開此權限！</string>
+    <string name="permission_denied_backup_sms">備份通訊錄需要讀取、修改短信權限，請先前往設置頁面打開此權限！</string>
+
+    <!-- SetPath Activity-->
+    <string name="set_dir_to_download_path">設為下載目錄</string>
+    <string name="confirm_set_to_download_path">確認設為該下載目錄？</string>
+    <string name="empty_directory">該目錄為空</string>
+    <string name="confirm_set_path">確認設置</string>
+    <string name="download_path_not_set">尚未設置</string>
+    <string name="error_path_without_write_permission">無法將此目錄設置為下載目錄</string>
+
+    <!-- User Management -->
+    <string name="title_user_management">用戶管理</string>
+    <string name="getting_user_list">獲取用戶列表&#8230;</string>
+    <string name="get_space_failed">空間獲取失敗</string>
+    <string name="user_manage_delete">刪除</string>
+    <string name="user_manage_password">密碼</string>
+    <string name="user_manage_limit">限額</string>
+    <string name="unlimited">無限額</string>
+    <string name="delete_user">刪除用戶</string>
+    <string name="warning_delete_user">警告：此操作將徹底刪除此用戶的所有數據</string>
+    <string name="deleting_user">正在刪除&#8230;</string>
+    <string name="delete_user_succeed">刪除成功</string>
+    <string name="delete_user_failed">刪除失敗</string>
+    <string name="add_user">添加用戶</string>
+    <string name="error_user_name_length">用戶名需要至少3個字符</string>
+    <string name="adding_user">正在添加&#8230;</string>
+    <string name="add_user_succeed">添加成功</string>
+    <string name="add_user_failed">添加失敗</string>
+    <string name="modify_user_space">修改限額</string>
+    <string name="tips_modify_user_space">請輸入限額大小</string>
+    <string name="tips_invalid_user_space">請輸入有效的限額值</string>
+    <string name="reset_user_pwd">重置密碼</string>
+    <string name="tips_reset_user_pwd">重置用戶的密碼為：123456</string>
+    <string name="resetting">正在重置&#8230;</string>
+    <string name="reset_succeed">重置成功</string>
+    <string name="reset_failed">重置失敗</string>
+    <string name="modify_user_pwd">修改密碼</string>
+    <string name="warning_modify_user_pwd">警告：請牢記您設置的新密碼</string>
+    <string name="enter_new_pwd">請輸入新密碼</string>
+    <string name="confirm_new_pwd">請確認新密碼</string>
+
+    <!-- System Status Activity -->
+    <string name="title_system_status">系統狀態</string>
+    <string name="querying_info">正在查詢&#8230;</string>
+    <string name="fmt_label_cpu_load" formatted="false">CPU負載（已使用：%4s）</string>
+    <string name="fmt_label_memory" formatted="false">運行內存（總：%s&#160;/&#160;已使用：%s&#160;/&#160;剩余：%s）</string>
+    <string name="fmt_label_eth" formatted="false">有線網卡：%s（接收：%s&#160;/&#160;發送：%s&#160;）</string>
+
+    <!-- HardDisk Info Activity -->
+    <string name="title_hd_info">硬盤信息</string>
+    <string name="hd_info_tmp">硬盤溫度：</string>
+    <string name="hd_info_time">硬盤時長：</string>
+    <string name="hd_info_model">硬盤型號：</string>
+    <string name="hd_info_serial">序列號：</string>
+    <string name="hd_info_capacity">硬盤容量：</string>
+    <string name="fmt_hd_info_tmp" formatted="false">%d&#160;℃</string>
+    <string name="fmt_oneos_mode" formatted="false">當前正在使用模式：%s</string>
+    <string name="hint_enter_ssupd_name">請輸入設備名稱</string>
+    <string name="ssudp_boned">SSUDP已綁定</string>
+    <string name="tip_unbind_ssudp">確認解除綁定SSUDP？</string>
+    <string name="title_bind_ssudp">綁定SSUDP</string>
+    <string name="title_ssudp_name">設備名稱</string>
+    <string name="tool_bind_ssudp">SSUDP綁定</string>
+    <string name="unbind">解除綁定</string>
+    <string name="unbind_succeed">解綁成功</string>
+    <string name="more">更多</string>
+    <string name="extract_file">解壓</string>
+    <string name="formating">正在格式化&#8230;</string>
+    <string name="hd_lvm">LVM模式</string>
+    <string name="hd_raid0">RAID0模式</string>
+    <string name="hd_raid1">RAID1模式</string>
+    <string name="hd_format">格式化硬碟</string>
+    <string name="hd_more_title">選擇硬碟模式</string>
+    <string name="hd_one_title">格式化硬碟</string>
+    <string name="hd_raid0_info"></string>
+</resources>

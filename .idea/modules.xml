@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OneOSAndroidClient.iml" filepath="$PROJECT_DIR$/OneOSAndroidClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/greendaogenerator/greendaogenerator.iml" filepath="$PROJECT_DIR$/greendaogenerator/greendaogenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/magicdialog/magicdialog.iml" filepath="$PROJECT_DIR$/magicdialog/magicdialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialloadingprogressbar/materialloadingprogressbar.iml" filepath="$PROJECT_DIR$/materialloadingprogressbar/materialloadingprogressbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/segementgroup/segementgroup.iml" filepath="$PROJECT_DIR$/segementgroup/segementgroup.iml" />
+    </modules>
+  </component>
+</project>

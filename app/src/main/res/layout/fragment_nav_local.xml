@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_local"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/layout_title_nav_file"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:layout_alignParentTop="true" />
+
+    <com.eli.oneos.widget.SearchPanel
+        android:id="@+id/layout_search_panel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <com.eli.oneos.widget.FileSelectPanel
+        android:id="@+id/layout_select_top_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_operate_bottom_panel"
+        android:layout_below="@+id/include_title"
+        android:background="@color/bg_page" />
+
+    <com.eli.oneos.widget.FileManagePanel
+        android:id="@+id/layout_operate_bottom_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_nav_bar_height"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

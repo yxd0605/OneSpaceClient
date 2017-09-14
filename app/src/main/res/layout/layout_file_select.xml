@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_file_select"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btn_select_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:gravity="center|left"
+        android:padding="8dp"
+        android:text="@string/cancel"
+        android:textColor="@color/selector_white_to_gray"
+        android:textSize="@dimen/text_size_sm" />
+
+    <TextView
+        android:id="@+id/text_count"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/hint_select_file"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title" />
+
+    <Button
+        android:id="@+id/btn_select_all"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:gravity="center|right"
+        android:padding="8dp"
+        android:text="@string/select_all"
+        android:textColor="@color/selector_white_to_gray"
+        android:textSize="@dimen/text_size_sm" />
+
+</RelativeLayout>

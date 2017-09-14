@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_timeline_header"
+    android:gravity="center"
+    android:id="@+id/timeline_header"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/iv_line"
+        android:layout_width="2dp"
+        android:layout_height="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@color/primary"
+        android:clickable="false"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/iv_state"
+        android:layout_toRightOf="@+id/iv_line"
+        android:clickable="false"
+        android:gravity="center|left"
+        android:padding="5dp"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/text_size_sm" />
+
+    <ImageView
+        android:id="@+id/iv_state"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+</RelativeLayout>

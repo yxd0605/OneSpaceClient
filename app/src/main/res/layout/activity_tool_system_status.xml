@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_page"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.eli.oneos.widget.TitleBackLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_tool_title_height"
+        android:background="@color/bg_title" />
+
+    <com.eli.oneos.widget.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp">
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/chart_cpu"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/txt_cpu_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/querying_info"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/text_size_min" />
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/chart_memory"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="35dp" />
+
+            <TextView
+                android:id="@+id/txt_memory_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/querying_info"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/text_size_min" />
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/chart_eth1"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="35dp" />
+
+            <TextView
+                android:id="@+id/txt_eth1_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/querying_info"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/text_size_min" />
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/chart_eth2"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="35dp" />
+
+            <TextView
+                android:id="@+id/txt_eth2_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/querying_info"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/text_size_min" />
+
+        </LinearLayout>
+    </com.eli.oneos.widget.ReboundScrollView>
+
+</RelativeLayout>

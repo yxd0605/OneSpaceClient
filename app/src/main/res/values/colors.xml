@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Primary color-->
+    <color name="primary">#FF03A9F4</color>
+    <color name="primary_dark">#FF0095d8</color>
+
+    <!-- Base color -->
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+    <color name="red">@android:color/holo_red_light</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="trans_gray">#88D0D0D0</color>
+    <color name="light_gray">#D0D0D0</color>
+    <color name="gray">#C0C0C0</color>
+    <color name="darker_gray">@android:color/darker_gray</color>
+    <color name="darker">#4B4B4B</color>
+    <color name="green">#FF99D920</color>
+
+    <!-- Gray selector -->
+    <color name="gray_normal">@color/gray</color>
+    <color name="gray_selected">@color/darker_gray</color>
+    <color name="gray_pressed">@color/darker_gray</color>
+    <color name="gray_disabled">@color/light_gray</color>
+    <color name="content_empty">@color/gray</color>
+
+    <!-- EditText border selector-->
+    <color name="edittext_border_normal">@color/darker_gray</color>
+    <color name="edittext_border_pressed">@color/primary</color>
+    <color name="edittext_border_disabled">@color/gray_disabled</color>
+
+    <!-- System Status Bar color-->
+    <color name="status_bar">@color/primary</color>
+    <color name="bg_title">@color/status_bar</color>
+    <color name="bg_page">@color/white</color>
+
+    <!-- Transparent PopupWindows background color -->
+    <color name="translucent_black">#70000000</color>
+    <color name="bg_pop_loading">@color/translucent_black</color>
+    <color name="bg_pop_spinner">@color/translucent_black</color>
+    <color name="bg_pop_type">@color/translucent_black</color>
+    <color name="bg_pop_tree_view">@color/translucent_black</color>
+
+    <!-- List selector color -->
+    <color name="bg_list_transparent">@color/transparent</color>
+    <color name="bg_list_pressed_gray">@color/trans_gray</color>
+
+    <color name="line_nav_bar">#66B2B2B2</color>
+    <color name="line_dialog">@color/trans_gray</color>
+    <color name="line_list_view">@color/trans_gray</color>
+    <color name="line_settings">@color/trans_gray</color>
+    <color name="line_tree_view">@color/trans_gray</color>
+    <color name="bg_nav_bar">@color/bg_page</color>
+    <color name="bg_manage_bar">@color/bg_nav_bar</color>
+    <color name="bg_layout_order">@color/bg_nav_bar</color>
+    <color name="txt_nav_normal">#FFB5B5B5</color>
+
+    <color name="bg_timeline_header">#FFEEEEEE</color>
+    <color name="bg_picture_viewer_title">#884B4B4B</color>
+    <color name="bg_uninstall_app">@color/red</color>
+    <color name="circle_progress_base_color">#e5e5e5</color>
+    <color name="circle_progress_primary_color">@color/primary</color>
+    <color name="bg_pop_menu">#95000000</color>
+    <color name="bg_power_off_default">#FF4444</color>
+    <color name="bg_power_off_pressed">#FF3300</color>
+    <color name="front_anim_progress_bar">#9bc848</color>
+    <color name="text_anim_progress">#DDDDDD</color>
+    <color name="progress_user_space">#E0FFFF</color>
+
+
+
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+</resources>

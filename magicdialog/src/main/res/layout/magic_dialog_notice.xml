@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_square_full_radius_white">
+
+    <TextView
+        android:id="@+id/txt_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/tips"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_dialog_title"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_mid" />
+
+    <LinearLayout
+        android:id="@+id/layout_dialog_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_dialog_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_dialog_check"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/selector_check_box"
+            android:button="@null"
+            android:checked="false"
+            android:focusableInTouchMode="false"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/txt_dialog_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/darker"
+            android:textSize="@dimen/text_size_mid" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_dialog_weight"
+        android:layout_below="@+id/layout_dialog_check"
+        android:background="@color/magic_dialog_line" />
+
+    <Button
+        android:id="@+id/btn_dialog_positive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_dialog_bottom_height"
+        android:layout_below="@+id/iv_line"
+        android:layout_weight="1.0"
+        android:background="@drawable/selector_square_bottom_radius_white_to_gray"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/text_size_mid"
+        android:textStyle="bold" />
+
+</RelativeLayout>

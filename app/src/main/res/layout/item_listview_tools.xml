@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_tool"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:addStatesFromChildren="true"
+    android:background="@drawable/selector_list_trans_to_gray"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/tool_icon"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/tool_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tool_icon"
+        android:singleLine="true"
+        android:textColor="@color/darker"
+        android:textSize="@dimen/text_size_mid" />
+
+</RelativeLayout>

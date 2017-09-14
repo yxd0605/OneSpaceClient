@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_inner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/layout_tips" >
+
+        <ImageView
+            android:id="@+id/pull_to_refresh_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_to_refresh_progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            app:mlpb_enable_circle_background="false"
+            app:mlpb_progress_color="@color/primary"
+            app:mlpb_progress_stoke_width="2dp"
+            app:mlpb_progress_text_visibility="invisible"
+            app:mlpb_show_arrow="false" />
+
+        <!--<ProgressBar
+            android:id="@+id/pull_to_refresh_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@anim/anim_progress_pull_refresh"
+            android:visibility="gone" />-->
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/pull_to_refresh_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_size_pull_to_refresh_header" />
+
+        <TextView
+            android:id="@+id/pull_to_refresh_sub_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_size_pull_to_refresh_header"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

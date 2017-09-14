@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <com.eli.oneos.widget.TitleBackLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:background="@color/bg_title" />
+
+    <com.eli.oneos.widget.ReboundScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layout_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/layout_login_padding_bottom"
+            android:paddingLeft="@dimen/layout_login_padding_left"
+            android:paddingRight="@dimen/layout_login_padding_right"
+            android:paddingTop="@dimen/layout_login_padding_top">
+
+            <RelativeLayout
+                android:id="@+id/layout_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_square_top_stroke"
+                android:padding="13dp">
+
+                <EditText
+                    android:id="@+id/editext_user"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:hint="@string/hint_enter_user"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <ImageButton
+                    android:id="@+id/btn_more_user"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_button_more"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/editext_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_size_stroke_shrink"
+                android:background="@drawable/selector_square_mid_stroke"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:hint="@string/hint_enter_pwd"
+                android:inputType="textPassword"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_mid" />
+
+            <RelativeLayout
+                android:id="@+id/layout_server"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_size_stroke_shrink"
+                android:background="@drawable/selector_square_mid_stroke"
+                android:padding="13dp">
+
+                <EditText
+                    android:id="@+id/editext_ip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:digits="0123456789."
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:hint="@string/hint_select_ip"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <ImageButton
+                    android:id="@+id/btn_more_ip"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_button_more"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/editext_port"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/common_size_stroke_shrink"
+                android:background="@drawable/selector_square_bottom_stroke"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:hint="@string/hint_enter_port"
+                android:imeActionLabel="@string/login"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_mid" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/layout_common_button_height"
+                android:layout_marginBottom="@dimen/layout_login_padding_bottom"
+                android:layout_marginTop="@dimen/layout_login_padding_top"
+                android:background="@drawable/selector_button_bg_primary"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_big" />
+        </LinearLayout>
+    </com.eli.oneos.widget.ReboundScrollView>
+
+</RelativeLayout>
