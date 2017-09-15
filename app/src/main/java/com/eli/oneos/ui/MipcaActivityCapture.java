@@ -42,6 +42,7 @@ import com.eli.oneos.model.oneos.OneOSInfo;
 import com.eli.oneos.model.oneos.user.LoginManage;
 import com.eli.oneos.model.oneos.user.LoginSession;
 import com.eli.oneos.receiver.NetworkStateManager;
+import com.eli.oneos.utils.DialogUtils;
 import com.eli.oneos.widget.TitleBackLayout;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
@@ -250,7 +251,7 @@ public class MipcaActivityCapture extends BaseActivity implements Callback {
                                 String resultString = recode(results.toString());
 
                                 if (resultString.indexOf("token") != -1 && resultString.indexOf("ip") != -1) {
-                                    Log.d(TAG, "resultIntent = " + resultString);
+                                    Log.d(TAG, "onActivityResult resultIntent = " + resultString);
                                     try {
                                         JSONObject json = new JSONObject(resultString);
                                         domain = json.getString("ip");
@@ -266,14 +267,17 @@ public class MipcaActivityCapture extends BaseActivity implements Callback {
                                                         @Override
                                                         public void onError(int i) {
                                                             Log.d(TAG, "onError i========================" + i);
+                                                            showLoading(R.string.failed_login);
+                                                            finish();
+//                                                            DialogUtils.showNotifyDialog(MipcaActivityCapture.this, R.string.tips, R.string.connection_refused, R.string.ok, null);
                                                         }
                                                     });
 
                                                 }
                                             }.start();
                                         } else {
-                                            Log.d(TAG, "token===" + token);
-                                            Log.d(TAG, "domain===" + domain);
+                                            Log.d(TAG, "onActivityResult token===" + token);
+                                            Log.d(TAG, "onActivityResult domain===" + domain);
                                             gotoMainActivity();
                                         }
 
@@ -319,7 +323,6 @@ public class MipcaActivityCapture extends BaseActivity implements Callback {
             } else if (statusCode == NetworkStateManager.STATUS_CODE_DISCONNECTED) {
                 Log.d(TAG, "onDisconnected====");
                 String activityName = getRunningActivityName();
-                Log.d(TAG, "activityName == " + activityName);
                 if (activityName.indexOf("MipcaActicityCapture") != -1) {
                     showLoading(R.string.failed_login);
                 }
@@ -412,23 +415,30 @@ public class MipcaActivityCapture extends BaseActivity implements Callback {
         String results = decodeData(result.getText());
         String resultString = results;
         if (resultString.indexOf("token") != -1 && resultString.indexOf("ip") != -1) {
-            Log.d(TAG, "resultIntent = " + resultString);
+            Log.d(TAG, "handleDecode resultIntent = " + resultString);
 
             try {
                 JSONObject json = new JSONObject(resultString);
                 domain = json.getString("ip");
                 token = json.getString("token");
-
                 if (domain.endsWith("cifernet.net") || domain.endsWith("memenet.net")) {
                     final String mAccount = json.getString("mn");
                     final String mPass = json.getString("mp");
+                    Log.d(TAG, "handleDecode domain===" + domain);
+                    Log.d(TAG, "handleDecode token===" + token);
                     new Thread() {
                         @Override
                         public void run() {
+
+                            System.out.println("-=-=-==-=-===-=-=-=-=-=-=-=-=-");
                             CMAPI.getInstance().login(MipcaActivityCapture.this, mAccount, mPass, BUILD_VPN_REQUEST_CODE, new ResultListener() {
                                 @Override
                                 public void onError(int i) {
                                     Log.d(TAG, "onError i========================" + i);
+                                    showLoading(R.string.failed_login);
+                                    finish();
+                                    //DialogUtils.showNotifyDialog(MipcaActivityCapture.this, R.string.tips, R.string.connection_refused, R.string.ok, null);
+
                                 }
                             });
 

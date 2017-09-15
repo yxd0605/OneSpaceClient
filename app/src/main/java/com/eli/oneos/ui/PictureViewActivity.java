@@ -30,6 +30,8 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.eli.oneos.R;
 import com.eli.oneos.constant.OneOSAPIs;
+import com.eli.oneos.glide.GlideCatchUtil;
+import com.eli.oneos.glide.QiNiuImage;
 import com.eli.oneos.model.oneos.OneOSFile;
 import com.eli.oneos.model.oneos.user.LoginManage;
 import com.eli.oneos.model.oneos.user.LoginSession;
@@ -224,6 +226,7 @@ public class PictureViewActivity extends Activity {
                 }
             } else {
                 Log.d(TAG,"cache==================="+context.getExternalCacheDir());
+                Log.d(TAG,"cache size============"+ GlideCatchUtil.getInstance().getCacheSize());
                 final OneOSFile file = (OneOSFile) mList.get(position);
                 final String url = OneOSAPIs.genDownloadUrl(mLoginSession, file);
                 final String thumburl = OneOSAPIs.genThumbnailUrl(mLoginSession, file);
@@ -238,7 +241,7 @@ public class PictureViewActivity extends Activity {
 //                    /*.placeholder(R.drawable.ic_circle_progress_sm)*/.fitCenter().crossFade(250).error(R.drawable.icon_file_pic_default).into(photoView);
 
                     if (OneOSAPIs.isOneSpaceX1()) {
-                        Glide.with(context).load(url).diskCacheStrategy(DiskCacheStrategy.ALL)
+                        Glide.with(context).load(new QiNiuImage(url)).diskCacheStrategy(DiskCacheStrategy.ALL)
                     /*.placeholder(R.drawable.ic_circle_progress_sm)*/.fitCenter().crossFade(250).error(R.drawable.icon_file_pic_default).into(photoView);
                     } else {
                         Glide.with(context).load(thumburl).listener(new RequestListener<String, GlideDrawable>() {
@@ -250,7 +253,7 @@ public class PictureViewActivity extends Activity {
 
                             @Override
                             public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                                Glide.with(context).using(new ProgressModelLoader(new ProgressHandler(context))).load(url).diskCacheStrategy(DiskCacheStrategy.ALL).skipMemoryCache(true)
+                                Glide.with(context).using(new ProgressModelLoader(new ProgressHandler(context))).load(new QiNiuImage(url).getImageUrl()).diskCacheStrategy(DiskCacheStrategy.ALL).skipMemoryCache(true)
                                         .fitCenter().error(R.drawable.icon_file_pic_default).into(photoView);
                                 return false;
                             }

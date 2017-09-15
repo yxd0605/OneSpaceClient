@@ -82,6 +82,7 @@ public class LoginActivity extends BaseActivity {
     private List<DeviceInfo> mLANDeviceList = new ArrayList<DeviceInfo>();
     private List<DeviceInfo> mMementDeviceList = new ArrayList<DeviceInfo>();
     private SpinnerView mUserSpinnerView, mDeviceSpinnerView;
+    private boolean isFromMemenetClient = false;
 
     private ScanDeviceManager mScanManager = new ScanDeviceManager(this, new OnScanDeviceListener() {
         @Override
@@ -106,6 +107,17 @@ public class LoginActivity extends BaseActivity {
                 DeviceInfo DeviceInfo = new DeviceInfo(key, null, value, OneOSAPIs.ONE_API_DEFAULT_PORT, null, null, null, null,
                         Constants.DOMAIN_DEVICE_LAN, System.currentTimeMillis());
                 mLANDeviceList.add(DeviceInfo);
+            }
+
+
+            Intent intent = getIntent();
+            if (null != intent) {
+                String value = intent.getStringExtra("domain");
+                Log.d(TAG, "get domain: " + value);
+                if (!EmptyUtils.isEmpty(value)) {
+                    mIPTxt.setText(value);
+                    isFromMemenetClient = true;
+                }
             }
 
             if (EmptyUtils.isEmpty(mIPTxt.getText().toString()) && !EmptyUtils.isEmpty(mLANDeviceList)) {
@@ -483,7 +495,7 @@ public class LoginActivity extends BaseActivity {
         }
 
 
-        if (ip.endsWith("cifernet.net") || ip.endsWith("memenet.net")) {
+        if ((ip.endsWith("cifernet.net") || ip.endsWith("memenet.net")) && !isFromMemenetClient) {
             if (isMemenetInit) {
                 doLogin(user, pwd, ip, port, mac, domain);
             } else {
@@ -663,7 +675,6 @@ public class LoginActivity extends BaseActivity {
             case BUILD_VPN_REQUEST_CODE:    //米米网开启VPN
                 CMAPI.getInstance().onVpnPrepareResult(BUILD_VPN_REQUEST_CODE, resultCode);
                 break;
-
         }
     }
 
@@ -745,6 +756,7 @@ public class LoginActivity extends BaseActivity {
             Log.d(TAG, ">>>>>>>>>>>>>>>>>onDeviceChanged<<<<<<<<<<<<<<");
             List<Device> deviceList = CMAPI.getInstance().getDeviceList();
             boolean isHave = false;
+            Log.d(TAG,"size===="+deviceList.size());
             if (isMemenetConnected && !deviceList.isEmpty()) {
                 for (Device list : deviceList) {
                     String ip = mIPTxt.getText().toString();

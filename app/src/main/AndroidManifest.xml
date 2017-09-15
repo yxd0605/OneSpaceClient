@@ -211,6 +211,9 @@
             </intent-filter>
         </service>
 
+        <meta-data
+            android:name="com.eli.oneos.glide.GlideConfiguration"
+            android:value="GlideModule" />
     </application>
 
 </manifest>
